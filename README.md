@@ -4,12 +4,14 @@
 - Katharina Krebs
 ## Projektbeschreibung
 Ziel des Projekts ist die Auseinandersetzung mit verschiedenen Methoden des maschinellen Lernens anhand des MNIST-Datensatzes.
+// Beschreibung
 
 ## Stand der Technik - Erkennung von handgeschriebenen Ziffern
 
 ## Implementierung
 Hier folgt die Beschreibung der Umsetzung
-### Datensatz
+### Datensatz 
+// Katharina
 Bilddaten von handgeschriebenen Ziffern von 0–9:
 - Graustufen (0-255): ursprünglich black and white 20 x 20 pixel box, aspect ratio wurde eingehalten
 - Vereinheitlichte, konstante Bildgröße (28 x 28 Pixel)
@@ -37,9 +39,15 @@ y_train, y_test: uint8 array of digit labels (integers in range 0-9) with shape 
 siehe (https://keras.io/datasets/)
 
 ### Support Vector Machine
+// Andreas
+Hyperparameter: Anzahl der Keypoints, Größe der Features
+Classifiers (C, ... gamma ..) -> Korrelation der Werte
+Toleranz (epsilon) -> for regression only
+https://scikit-learn.org/stable/modules/classes.html#module-sklearn.svm
 
-### Neuronales Netz
-
+### Neuronales Netz 
+// Katharina
+ 
 **Input Layer** 
 Welche Merkmale / features eignen sich als Input?
 - Pixelwerte
@@ -47,13 +55,22 @@ Welche Merkmale / features eignen sich als Input?
 - Globale Bilddeskriptoren
 - …
 
+### CNN
+
+
 ## getestete Hyperparameter
 
-## Plots
 
+## Plots
+Loss function, accuracy, Hyperparameter (heatmap)
+
+### Simulated Annealing
+// Andreas 
+wichtig: nicht alle Parameter sind unabhängig voneinander. Nur die unabhängigen Parameter verändern, die abhängigen initial wählen und dann konstant lassen
 
 ### Preprocessing der Daten
 **Test** 
+// Katharina
 – Verringerung von Kontrast und Helligkeit des Bilddatensatzes:
 - Verändert sich die Erkennungsrate und wenn ja, wie / wie stark?
 - Wie beeinflusst die Anpassung des Bias-Wertes die eventuelle Veränderung? 
