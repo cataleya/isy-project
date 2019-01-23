@@ -44,6 +44,8 @@ Hyperparameter: Anzahl der Keypoints, Größe der Features
 Classifiers (C, ... gamma ..) -> Korrelation der Werte
 Toleranz (epsilon) -> for regression only
 https://scikit-learn.org/stable/modules/classes.html#module-sklearn.svm
+Architekturen mit Ergebnissen (Paper): http://yann.lecun.com/exdb/mnist/
+SVM und Hyperparameter: https://stats.stackexchange.com/questions/290642/how-to-choose-a-support-vector-machine-classifier-and-tune-the-hyperparameters
 
 ### Neuronales Netz 
 // Katharina
