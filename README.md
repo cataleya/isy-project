@@ -3,8 +3,68 @@
 - Andreas Hallmann
 - Katharina Krebs
 ## Projektbeschreibung
-Hier folgt die Projektbeschreibung
+Ziel des Projekts ist die Auseinandersetzung mit verschiedenen Methoden des maschinellen Lernens anhand des MNIST-Datensatzes.
+
+## Stand der Technik - Erkennung von handgeschriebenen Ziffern
+
 ## Implementierung
 Hier folgt die Beschreibung der Umsetzung
+### Datensatz
+Bilddaten von handgeschriebenen Ziffern von 0–9:
+- Graustufen (0-255): ursprünglich black and white 20 x 20 pixel box, aspect ratio wurde eingehalten
+- Vereinheitlichte, konstante Bildgröße (28 x 28 Pixel)
+- Zentrierung der Ziffern auf dem Bild: entered in a 28x28 image by computing the center of mass of the pixels, and translating the image so as to position this point at the center of the 28x28 field
+
+- 60.000 Training Samples 
+- 10.000 Test Samples
+
+(https://github.com/cataleya/isy-project/blob/master/img/documentation/Example-images-from-the-MNIST-dataset.png)
+
+4 Datensets:
+Training set images
+Training set labels
+Test set images
+Test set labels
+
+siehe auch: https://github.com/datapythonista/mnist
+
+Das Keras Framework stellt den Import des MNIST-Datensatzes bereit. 
+Rückgabewert: 
+2 tuples:
+x_train, x_test: uint8 array of grayscale image data with shape (num_samples, 28, 28).
+y_train, y_test: uint8 array of digit labels (integers in range 0-9) with shape (num_samples,).
+
+siehe (https://keras.io/datasets/)
+
+### Support Vector Machine
+
+### Neuronales Netz
+
+**Input Layer** 
+Welche Merkmale / features eignen sich als Input?
+- Pixelwerte
+- Gradienten
+- Globale Bilddeskriptoren
+- …
+
+## getestete Hyperparameter
+
+## Plots
+
+
+### Preprocessing der Daten
+**Test** 
+– Verringerung von Kontrast und Helligkeit des Bilddatensatzes:
+- Verändert sich die Erkennungsrate und wenn ja, wie / wie stark?
+- Wie beeinflusst die Anpassung des Bias-Wertes die eventuelle Veränderung? 
+
 ## Ergebnisse
 Hier folgt die Ergebnisdiskussion
+
+Vergleich von Erkennungsraten und Rechenaufwand von SVM und NN / CNN
+
+> With some classification methods (particuarly template-based methods, such as SVM and K-nearest neighbors), the error rate improves when the digits are centered by bounding box rather than center of mass. If you do this kind of pre-processing, you should report it in your publications.
+
+### Quellen
+Dataset: http://yann.lecun.com/exdb/mnist/
+https://pypi.org/project/mnist/#description
