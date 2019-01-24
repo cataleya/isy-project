@@ -43,20 +43,32 @@ siehe (https://keras.io/datasets/)
 Hyperparameter: Anzahl der Keypoints, Größe der Features,
 Classifiers (C, ... gamma ..) -> Korrelation der Werte
 https://scikit-learn.org/stable/modules/classes.html#module-sklearn.svm
-Architekturen mit Ergebnissen (Paper): http://yann.lecun.com/exdb/mnist/
+Architekturen mit Ergebnissen (Papers): http://yann.lecun.com/exdb/mnist/
 SVM und Hyperparameter: https://stats.stackexchange.com/questions/290642/how-to-choose-a-support-vector-machine-classifier-and-tune-the-hyperparameters
 //
 SVMs können zu zweierlei Zwecke eingesetzt werden. Einerseits dienen sie als Regressor. Für unser Projekt ist aber nur die zweite Funktion -- die Klassifikation -- interessant.
 
-TODO: Wofür sind SVMs im Allgemeinen gut geeignet??
-TODO: Was sind Vor- und Nachteile von SVMs gegenüber NNs nd CNNs?
+TODO:
+The advantages of support vector machines are:
+- Effective in high dimensional spaces
+- Still effective in cases where number of dimensions is greater than the number of samples
+- Uses a subset of training points in the decision function (called support vectors), so it is also memory efficient
+- Versatile: different Kernel functions can be specified for the decision function. Common kernels are provided, but it is also possible to specify custom kernels
 
-Die Trainingsobjekte müssen gelabelt und als Vektoren vorliegen. Ziel des Trainings einer SVM ist es, in den Vektorraum $X$, in dem die Vektoren leben Trennflächen -- sog. *Hyperflächen* -- einzupassen, die die Trainingsobjekte in Klassen unterteilen. Der Abstand der nächsten Nachbarn zu diesen *Hyperflächen* wird dabei maximiert. Dieser breite Rand soll garantieren, dass später die Testobjekte richtig klassifiziert werden. Beim Berechnen der *Hyperflächen* spielen die weiter von ihr entfernten Trainingsvektoren keine Rolle. Die Vektoren, welche zur Berechnung herangezogen werden, werden gemäß ihrer Funktion auch *Stützvektoren* genannt.
+The disadvantages of support vector machines include:
+If the number of features is much greater than the number of samples, avoid over-fitting in choosing Kernel functions and regularization term is crucial.
+SVMs do not directly provide probability estimates, these are calculated using an expensive five-fold cross-validation (see Scores and probabilities, below).
+Quelle: https://scikit-learn.org/stable/modules/svm.html
+
+
+Die Trainingsobjekte müssen gelabelt und als Vektoren vorliegen. Ziel des Trainings einer SVM ist es, in den Vektorraum *X*, in dem die Vektoren leben Trennflächen -- sog. *Hyperflächen* -- einzupassen, die die Trainingsobjekte in Klassen unterteilen. Der Abstand der nächsten Nachbarn zu diesen *Hyperflächen* wird dabei maximiert. Dieser breite Rand soll garantieren, dass später die Testobjekte richtig klassifiziert werden. Beim Berechnen der *Hyperflächen* spielen die weiter von ihr entfernten Trainingsvektoren keine Rolle. Die Vektoren, welche zur Berechnung herangezogen werden, werden gemäß ihrer Funktion auch *Stützvektoren* genannt.
 
 Für den Fall, dass die Trennflächen *Hyperebenen* sind, nennt man die Objekte linear trennbar. Diese Eigenschaft erfüllen die meisten Objektmengen jedoch nicht. Um nichtlineare Klassengrenzen zu berechnen, wird der sogenannte *Kernel-Trick* benutzt.
-Die Idee hinter dem *Kernel-Trick* ist, die Trainingsvektoren aus dem Raum $X$ in einen höherdimensionalen Raum $F$ zu überführen, in dem sie dann linear trennbar sind. Es werden die Trennebenen berechnet und diese anschließend in den Raum $X$ zurücktransformiert.
+Die Idee hinter dem *Kernel-Trick* ist, die Trainingsvektoren aus dem Raum *X* in einen höherdimensionalen Raum *F* zu überführen, in dem sie dann linear trennbar sind. Es werden die Trennebenen berechnet und diese anschließend in den Raum *X* zurücktransformiert.
 
-Sogenannte *Schlupfvariablen* machen SVMs flexibler. Sie erlauben es dem Klassifikator, einzelne Vektoren falsch zu klassifizieren, bestrafen dies jedoch gleichzeitig. Dadurch wird *overfitting* vermieden und es werden weniger *Stützvektoren* benötigt.
+Sogenannte *Schlupfvariablen* machen SVMs flexibler. Mit ihnen lassen sich sogenannte *Soft Margin Hyperflächen* berechnen. Diese lassen es zu, dass Ausreißer in den Trainngsdaten weniger Beachtung finden. Dadurch wird *overfitting* vermieden und es werden weniger *Stützvektoren* benötigt.
+
+
 
 
 Quelle: https://de.wikipedia.org/wiki/Support_Vector_Machine
