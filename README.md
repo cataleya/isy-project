@@ -40,12 +40,27 @@ siehe (https://keras.io/datasets/)
 
 ### Support Vector Machine
 // Andreas
-Hyperparameter: Anzahl der Keypoints, Größe der Features
+Hyperparameter: Anzahl der Keypoints, Größe der Features,
 Classifiers (C, ... gamma ..) -> Korrelation der Werte
-Toleranz (epsilon) -> for regression only
 https://scikit-learn.org/stable/modules/classes.html#module-sklearn.svm
 Architekturen mit Ergebnissen (Paper): http://yann.lecun.com/exdb/mnist/
 SVM und Hyperparameter: https://stats.stackexchange.com/questions/290642/how-to-choose-a-support-vector-machine-classifier-and-tune-the-hyperparameters
+//
+SVMs können zu zweierlei Zwecke eingesetzt werden. Einerseits dienen sie als Regressor. Für unser Projekt ist aber nur die zweite Funktion -- die Klassifikation -- interessant.
+
+TODO: Wofür sind SVMs im Allgemeinen gut geeignet??
+TODO: Was sind Vor- und Nachteile von SVMs gegenüber NNs nd CNNs?
+
+Die Trainingsobjekte müssen gelabelt und als Vektoren vorliegen. Ziel des Trainings einer SVM ist es, in den Vektorraum $X$, in dem die Vektoren leben Trennflächen -- sog. *Hyperflächen* -- einzupassen, die die Trainingsobjekte in Klassen unterteilen. Der Abstand der nächsten Nachbarn zu diesen *Hyperflächen* wird dabei maximiert. Dieser breite Rand soll garantieren, dass später die Testobjekte richtig klassifiziert werden. Beim Berechnen der *Hyperflächen* spielen die weiter von ihr entfernten Trainingsvektoren keine Rolle. Die Vektoren, welche zur Berechnung herangezogen werden, werden gemäß ihrer Funktion auch *Stützvektoren* genannt.
+
+Für den Fall, dass die Trennflächen *Hyperebenen* sind, nennt man die Objekte linear trennbar. Diese Eigenschaft erfüllen die meisten Objektmengen jedoch nicht. Um nichtlineare Klassengrenzen zu berechnen, wird der sogenannte *Kernel-Trick* benutzt.
+Die Idee hinter dem *Kernel-Trick* ist, die Trainingsvektoren aus dem Raum $X$ in einen höherdimensionalen Raum $F$ zu überführen, in dem sie dann linear trennbar sind. Es werden die Trennebenen berechnet und diese anschließend in den Raum $X$ zurücktransformiert.
+
+Sogenannte *Schlupfvariablen* machen SVMs flexibler. Sie erlauben es dem Klassifikator, einzelne Vektoren falsch zu klassifizieren, bestrafen dies jedoch gleichzeitig. Dadurch wird *overfitting* vermieden und es werden weniger *Stützvektoren* benötigt.
+
+
+Quelle: https://de.wikipedia.org/wiki/Support_Vector_Machine
+
 
 ### Neuronales Netz 
 // Katharina
