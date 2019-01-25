@@ -20,7 +20,7 @@ Bilddaten von handgeschriebenen Ziffern von 0–9:
 - 60.000 Training Samples 
 - 10.000 Test Samples
 
-(https://github.com/cataleya/isy-project/blob/master/img/documentation/Example-images-from-the-MNIST-dataset.png)
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/Example-images-from-the-MNIST-dataset.png)
 
 4 Datensets:
 Training set images
