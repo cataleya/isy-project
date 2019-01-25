@@ -68,11 +68,37 @@ Die Idee hinter dem *Kernel-Trick* ist, die Trainingsvektoren aus dem Raum *X* i
 
 Sogenannte *Schlupfvariablen* machen SVMs flexibler. Mit ihnen lassen sich sogenannte *Soft Margin Hyperflächen* berechnen. Diese lassen es zu, dass Ausreißer in den Trainngsdaten weniger Beachtung finden. Dadurch wird *overfitting* vermieden und es werden weniger *Stützvektoren* benötigt.
 
-
-
-
 Quelle: https://de.wikipedia.org/wiki/Support_Vector_Machine
 
+Zu implementierende Modelle + Hyperparameter:
+ linear kernel: <x, x'>
+ rbf kernel: exp(-gamma*||x-x'||^2)
+ polynomial: (gamma*<x, x'> + r)^d ... d->degree , r->coef0
+
+SVC(...):
+ C=1.0 
+ kernel=’rbf’, ‘linear’, ‘poly’
+ degree=2, 4, 9
+ gamma=’auto_deprecated’ (=1/n_features) ODER: Probiere mit gamma= 1/n_features, 100/n_features, 0.01/n_features
+ coef0=0.0 ... habe keine Ahnung, welche Werte hier sinnvoll wären
+ shrinking=True, 
+ probability=False 
+ tol=0.001 
+ cache_size=2000
+ class_weight=None
+ verbose=False
+ max_iter=-1 ... no limit for number of iterations
+ decision_function_shape=’ovr’
+ random_state=None)
+
+
+Auswertung:
+
+Bisherige Virtual-SVMs haben eine Test-Fehlerrate von 0,56% erreicht (*Virtual SVM deg-9 poly*).
+Beste Fehlerrate mit *Reduced Set SVM deg 5 polynomial*: 1,0%
+Quelle: DeCoste and Scholkopf (2002)
+
+Y. LeCun, L. Bottou, Y. Bengio and P. Haffner: Gradient-Based Learning Applied to Document Recognition, Proceedings of the IEEE, 86(11):2278-2324, November 1998, \cite{lecun-98}. 
 
 ### Neuronales Netz 
 // Katharina
