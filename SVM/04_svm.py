@@ -40,14 +40,14 @@ print("Testing matrix shape", X_test.shape)
 
 lsvm = svm.SVC(C=1.0, kernel='rbf', gamma='auto',
                  coef0=0.0, shrinking=True, probability=False,
-                 tol=1e-5, cache_size=2000)
+                 tol=1e-3, cache_size=1000)
 
 # scaler = preprocessing.StandardScaler()
 # scaler.fit(xTrain, yTrain)
-
+print('hallo')
 lsvm.fit(X_train, y_train)
 
-
+print('hallo')
 
 
 numCorrectlyPredicted = 0
