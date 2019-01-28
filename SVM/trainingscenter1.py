@@ -1,5 +1,6 @@
 from utils import mnist_reader
 import numpy as np
+from sklearn_svm import sklearn_svm
 
 ##################################################################################################
 #
@@ -29,77 +30,18 @@ print("Testing matrix shape", X_test.shape)
 
 # Trainiere und Teste SVM
 
-# Kernel: linear
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='linear', degree=2, gamma='auto',
-                 coef0=0.0, shrinking=True, probability=False,
-                 tol=1e-3, cache_size=4000)
 
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='linear', degree=2, gamma='auto',
-                 coef0=0.0, shrinking=True, probability=False,
-                 tol=1e-5, cache_size=4000)
 
-# kernel: poly2
-
-# degree: 2
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=2, gamma='auto',
-                 coef0=0.0, shrinking=True, probability=False,
-                 tol=1e-3, cache_size=4000)
-
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=2, gamma=1/10,
-                 coef0=0.0, shrinking=True, probability=False,
-                 tol=1e-3, cache_size=4000)
-
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=2, gamma=1/100,
-                 coef0=0.0, shrinking=True, probability=False,
-                 tol=1e-3, cache_size=4000)
-
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=2, gamma=1/1000,
-                 coef0=0.0, shrinking=True, probability=False,
-                 tol=1e-3, cache_size=4000)
-
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=2, gamma=1/100000,
-                 coef0=0.0, shrinking=True, probability=False,
-                 tol=1e-3, cache_size=4000)
-
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=2, gamma='auto',
+# Kernel : rbf
+sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='rbf', degree=9, gamma='auto',
                  coef0=1.0, shrinking=True, probability=False,
                  tol=1e-3, cache_size=4000)
 
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=2, gamma='auto',
-                 coef0=100.0, shrinking=True, probability=False,
-                 tol=1e-3, cache_size=4000)
-
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=2, gamma='auto',
-                 coef0=-1.0, shrinking=True, probability=False,
-                 tol=1e-3, cache_size=4000)
-
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=2, gamma='auto',
-                 coef0=-100.0, shrinking=True, probability=False,
-                 tol=1e-3, cache_size=4000)
-
-# degree: 4
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=4, gamma='auto',
+sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='rbf', degree=9, gamma=1/10,
                  coef0=1.0, shrinking=True, probability=False,
                  tol=1e-3, cache_size=4000)
 
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=4, gamma=1/10,
-                 coef0=1.0, shrinking=True, probability=False,
-                 tol=1e-3, cache_size=4000)
-
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=4, gamma=1/10000,
-                 coef0=1.0, shrinking=True, probability=False,
-                 tol=1e-3, cache_size=4000)
-
-# degree : 9
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=9, gamma='auto',
-                 coef0=1.0, shrinking=True, probability=False,
-                 tol=1e-3, cache_size=4000)
-
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=9, gamma=1/10,
-                 coef0=1.0, shrinking=True, probability=False,
-                 tol=1e-3, cache_size=4000)
-
-sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='poly', degree=9, gamma=1/10000,
+sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='rbf', degree=9, gamma=1/10000,
                  coef0=1.0, shrinking=True, probability=False,
                  tol=1e-3, cache_size=4000)
 

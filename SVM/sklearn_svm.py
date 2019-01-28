@@ -1,5 +1,5 @@
 import numpy as np
-from sklearn import sklearn_svm
+from sklearn import svm
 
 ############################################################
 #
@@ -29,16 +29,28 @@ def sklearn_svm(X_train, y_train, X_test, y_test, C=1.0, kernel='linear', degree
     for i in np.arange(len(y_predict)):
         if y_predict[i] == y_test[i]:
             numCorrectlyPredicted = numCorrectlyPredicted + 1
+    detection_rate = numCorrectlyPredicted / X_test.shape[0]
 
-    print('Teache SVM mit ', X_train, ' Trainingsdaten:')
+    # Terminalausgabe:
+
+    print('Teache SVM mit', X_train.shape[0], 'Trainingsdaten:')
     print('SVM-Parameter:')
-    print('C=',C, ', kernel=', kernel, ', degree=', degree, ', gamma=', gamma,
+    print('C=',C, ',kernel=', kernel, ', degree=', degree, ', gamma=', gamma,
         ', coef=', coef0, ', shrinking=', shrinking, ', probability=', probability,
         ', tol=',tol, ', cache_size=', cache_size)
-    print('Teste SVM mit :', X_test, ' Testdaten:')
-    detection_rate = numCorrectlyPredicted / X_test.shape[0]
-    print('detection rate = ', detection_rate)
-    print # Leerzeile
+    print('Teste SVM mit:', X_test.shape[0], 'Testdaten:')
+    print('detection rate=', detection_rate)
+    print('\n')
+
+    # schreibe Trainingslog in Datei:
+
+    f = open("svm_ergebnisse.txt", "a")
+    f.write(repr(X_train.shape[0]) + ' ' + repr(X_test.shape[0]) + ' ')
+    f.write(repr(C) + ' ' + repr(kernel) + ' ' + repr(degree) + ' ' + repr(gamma) + ' ' + repr(coef0) + ' ' + repr(shrinking)
+            + ' ' + repr(probability) + ' ' + repr(tol) + ' ' + repr(cache_size) + ' ')
+    f.write(repr(detection_rate))
+    f.write('\n')
+    f.close()
 
     return detection_rate
 

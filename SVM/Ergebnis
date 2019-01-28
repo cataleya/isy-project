@@ -1,0 +1,44 @@
+TRAINING AUF 60k Trainingsdaten und 10k Testdaten
+svm.SVC(C=1.0, kernel='linear', gamma='auto',
+                 coef0=0.0, shrinking=True, probability=False,
+                 tol=1e-3, cache_size=4000)
+0,87
+
+------------------------------------------------------------------------------------------------------------------
+
+TRAINING AUF 6k Trainingsdaten und 1k Testdaten
+DETERMINISTISCHES TRAINING: es kommt immer der selbe Klassifizierer raus (selbe Erkennungsraten)
+
+
+lsvm = svm.SVC(C=1.0, kernel='linear', gamma='auto',
+                 coef0=0.0, shrinking=True, probability=False,
+                 tol=1e-3, cache_size=7000)
+0,79
+
+lsvm = svm.SVC(C=1.0, kernel='poly', degree=2, gamma='auto',
+                 coef0=0.0, shrinking=True, probability=False,
+                 tol=1e-3, cache_size=7000)
+0,70
+
+lsvm = svm.SVC(C=1.0, kernel='poly', degree=2, gamma=1/10,
+                 coef0=0.0, shrinking=True, probability=False,
+                 tol=1e-3, cache_size=7000)
+0,94
+
+
+lsvm = svm.SVC(C=1.0, kernel='poly', degree=4, gamma='auto',
+                 coef0=0.0, shrinking=True, probability=False,
+                 tol=1e-3, cache_size=7000)
+0,68
+
+lsvm = svm.SVC(C=1.0, kernel='poly', degree=9, gamma='auto',
+                 coef0=0.0, shrinking=True, probability=False,
+                 tol=1e-3, cache_size=7000)
+0,691
+
+lsvm = svm.SVC(C=1.0, kernel='rbf', degree=4, gamma='auto',
+                 coef0=0.0, shrinking=True, probability=False,
+                 tol=1e-3, cache_size=7000)
+0,12
+
+
