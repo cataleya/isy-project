@@ -21,7 +21,7 @@ Der Datensatz ist wiefolgt aufgebaut:
 - Test set labels
 
 Das Keras Framework stellt den Import des MNIST-Datensatzes bereit. 
-Rückgabewert: 
+Rückgabewert:
 2 tuples:
 X_train, X_test: uint8 array of grayscale image data with shape (num_samples, 28, 28).
 y_train, y_test: uint8 array of digit labels (integers in range 0-9) with shape (num_samples,).
