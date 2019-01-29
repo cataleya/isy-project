@@ -21,14 +21,15 @@ Der Datensatz ist wiefolgt aufgebaut:
 - Test set labels
 
 Das Keras Framework stellt den Import des MNIST-Datensatzes bereit. 
-Rückgabewert:
-2 tuples:
-X_train, X_test: uint8 array of grayscale image data with shape (num_samples, 28, 28).
-y_train, y_test: uint8 array of digit labels (integers in range 0-9) with shape (num_samples,).
+
+Rückgabewert sind 2 Tupel:
+- X_train, X_test: uint8 array of grayscale image data with shape (num_samples, 28, 28).
+- y_train, y_test: uint8 array of digit labels (integers in range 0-9) with shape (num_samples,).
 
 siehe (https://keras.io/datasets/)
 
 Beispielbilder des Datensatzes:
+
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/Example-images-from-the-MNIST-dataset.png)
 
 ## Implementierung
@@ -95,18 +96,73 @@ Quelle: DeCoste and Scholkopf (2002)
 
 Y. LeCun, L. Bottou, Y. Bengio and P. Haffner: Gradient-Based Learning Applied to Document Recognition, Proceedings of the IEEE, 86(11):2278-2324, November 1998, \cite{lecun-98}. 
 
-### Neuronales Netz 
-// Katharina
+### Neuronale Netze
+Neuronale Netze ahmen die Strukturen des menschlichen Gehirns nach. Die Grundidee dabei ist, dass Neuronen angesteuert und je nach Eingabewert eine Aktivierung des Neurons erfolgt oder nicht, was eine weitere Aktion auslöst, respektive nicht auslöst.
+Ziel des Einsatzes des neuronalen Netzes ist die Klassifizierung der Eingabewerte.
+
+Üblicherweise sind neuronale Netzwerke folgendermaßen aufgebaut:
+1. Input-Layer (In diesem Projekt die Daten aus MNIST)
+2. Hidden Layer (variabel in Anzahl der Layer und Anzahl der Neuronen)
+3. Output-Layer (In diesem Projekt 10 Klassen – die Ziffern 0 bis 9)
+
+Beispielsweise wird ein Bild der Ziffer 3 eingegeben, die Bilddaten werden gewichtet, durchlaufen verschiedene Layer und schließlich wird das Bild mit einer gewissen Wahrscheinlichkeit einer gewissen Klasse zugewiesen, zum Beispiel der Klasse Ziffer 3. Dies entspricht dann einer richtigen Klassifizierung.
  
+ (http://pages.cs.wisc.edu/~bolo/shipyard/neural/local.html)
+
+Bei der Erstellung von neuronalen Netzen sind vor allem die Anzahl der hidden Layer und Anzahl der Neuronen die maßgebenden Stellschrauben.
+
+In diesem Projekt wurden zwei verschiedene Strukturen getestet, die auch im Paper [“Deep Big Simple Neural Nets Excel on Hand- written Digit Recognition“](https://arxiv.org/pdf/1003.0358.pdf) von Ciresan, et al. getestet wurden.
+
+Beide Netzstrukturen wurden jeweils mit dem unveränderten MNIST-Datensatz über 30 und 50 Epochen trainiert.
+
+**Struktur 1: 1000, 500, 10**
+```
+nn1 = Sequential()
+nn1.add(Dense(1000, activation='relu', input_shape=(784,)))
+nn1.add(Dense(500, activation ='relu'))
+nn1.add(Dense(classes, activation='softmax'))
+nn1.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+```
+**Struktur 2: 9 x 1000, 10**
+```
+nn5 = Sequential()
+nn5.add(Dense(1000, activation='relu', input_shape=(784,)))
+nn5.add(Dense(1000, activation ='relu'))
+nn5.add(Dense(1000, activation ='relu'))
+nn5.add(Dense(1000, activation ='relu'))
+nn5.add(Dense(1000, activation ='relu'))
+nn5.add(Dense(1000, activation ='relu'))
+nn5.add(Dense(1000, activation ='relu'))
+nn5.add(Dense(1000, activation ='relu'))
+nn5.add(Dense(1000, activation ='relu'))
+nn5.add(Dense(classes, activation='softmax'))
+nn5.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+```
+ 
+**Plots Struktur 1:**
+
+![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model_accuracy_nn1_30.png)
+![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model_accuracy_nn1_50.png)
+
+![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model_loss_nn1_30.png)
+![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model_loss_nn1_50.png)
+
+**Plots Struktur 2:**
+
+![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model_accuracy_nn5_30.png)
+![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model-accuracy-nn5-50.png)
+
+![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model_loss_nn5_30.png)
+![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model_loss-nn5-50.png)
+
+### CNN
+
 **Input Layer** 
 Welche Merkmale / features eignen sich als Input?
 - Pixelwerte
 - Gradienten
 - Globale Bilddeskriptoren
 - …
-
-### CNN
-
 
 ## getestete Hyperparameter
 
