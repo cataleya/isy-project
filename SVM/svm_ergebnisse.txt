@@ -12,6 +12,40 @@ detection_rate= 0.8316666666666667
 
 Teache SVM mit 18000 Trainingsdaten:
 SVM-Parameter:
+C=1.0, kernel='linear', degree=2, gamma=1, coef=0.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
+Teste SVM mit 3000 Testdaten:
+detection_rate= 0.8316666666666667
+
+Teache SVM mit 18000 Trainingsdaten:
+SVM-Parameter:
+C=1.0, kernel='linear', degree=2, gamma=1, coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
+Teste SVM mit 3000 Testdaten:
+detection_rate= 0.8316666666666667
+
+Teache SVM mit 18000 Trainingsdaten:
+SVM-Parameter:
+C=1.0, kernel='linear', degree=2, gamma=1, coef=10.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
+Teste SVM mit 3000 Testdaten:
+detection_rate= 0.8316666666666667
+
+Teache SVM mit 18000 Trainingsdaten:
+SVM-Parameter:
+C=1.0, kernel='linear', degree=2, gamma=1, coef=100.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
+Teste SVM mit 3000 Testdaten:
+detection_rate= 0.8316666666666667
+
+Teache SVM mit 18000 Trainingsdaten:
+SVM-Parameter:
+C=1.0, kernel='linear', degree=2, gamma=10, coef=0.0, shrinking=True, probability=False, tol=1e-05, cache_size=4000
+Teste SVM mit 3000 Testdaten:
+detection_rate= 0.8316666666666667
+
+
+
+
+
+Teache SVM mit 18000 Trainingsdaten:
+SVM-Parameter:
 C=1.0, kernel='poly', degree=2, gamma='auto', coef=0.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
 Teste SVM mit 3000 Testdaten:
 detection_rate= 0.7773333333333333
@@ -66,95 +100,6 @@ detection_rate= 0.006
 
 Teache SVM mit 18000 Trainingsdaten:
 SVM-Parameter:
-C=1.0, kernel='poly', degree=4, gamma='auto', coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
-Teste SVM mit 3000 Testdaten:
-detection_rate= 0.5613333333333334
-
-Teache SVM mit 18000 Trainingsdaten:
-SVM-Parameter:
-C=1.0, kernel='poly', degree=4, gamma=0.1, coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
-Teste SVM mit 3000 Testdaten:
-detection_rate= 0.9326666666666666
-
-Teache SVM mit 18000 Trainingsdaten:
-SVM-Parameter:
-C=1.0, kernel='poly', degree=4, gamma=0.0001, coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
-Teste SVM mit 3000 Testdaten:
-detection_rate= 0.8723333333333333
-
-Teache SVM mit 18000 Trainingsdaten:
-SVM-Parameter:
-C=1.0, kernel='poly', degree=9, gamma='auto', coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
-Teste SVM mit 3000 Testdaten:
-detection_rate= 0.204
-
-Teache SVM mit 18000 Trainingsdaten:
-SVM-Parameter:
-C=1.0, kernel='poly', degree=9, gamma=0.1, coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
-Teste SVM mit 3000 Testdaten:
-detection_rate= 0.942
-
-Teache SVM mit 18000 Trainingsdaten:
-SVM-Parameter:
-C=1.0, kernel='poly', degree=9, gamma=0.0001, coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
-Teste SVM mit 3000 Testdaten:
-detection_rate= 0.808
-
-Teache SVM mit 18000 Trainingsdaten:
-SVM-Parameter:
-C=1.0, kernel='rbf', degree=9, gamma='auto', coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
-Teste SVM mit 3000 Testdaten:
-detection_rate= 0.10433333333333333
-
-Teache SVM mit 18000 Trainingsdaten:
-SVM-Parameter:
-C=1.0, kernel='rbf', degree=9, gamma=0.1, coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
-Teste SVM mit 3000 Testdaten:
-detection_rate= 0.10433333333333333
-
-Teache SVM mit 18000 Trainingsdaten:
-SVM-Parameter:
-C=1.0, kernel='rbf', degree=9, gamma=0.0001, coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
-Teste SVM mit 3000 Testdaten:
-detection_rate= 0.10433333333333333
-
-
-
-
-
-
-Teache SVM mit 18000 Trainingsdaten:
-SVM-Parameter:
-C=1.0, kernel='linear', degree=2, gamma=1, coef=0.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
-Teste SVM mit 3000 Testdaten:
-detection_rate= 0.8316666666666667
-
-Teache SVM mit 18000 Trainingsdaten:
-SVM-Parameter:
-C=1.0, kernel='linear', degree=2, gamma=1, coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
-Teste SVM mit 3000 Testdaten:
-detection_rate= 0.8316666666666667
-
-Teache SVM mit 18000 Trainingsdaten:
-SVM-Parameter:
-C=1.0, kernel='linear', degree=2, gamma=1, coef=10.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
-Teste SVM mit 3000 Testdaten:
-detection_rate= 0.8316666666666667
-
-Teache SVM mit 18000 Trainingsdaten:
-SVM-Parameter:
-C=1.0, kernel='linear', degree=2, gamma=1, coef=100.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
-Teste SVM mit 3000 Testdaten:
-detection_rate= 0.8316666666666667
-
-Teache SVM mit 18000 Trainingsdaten:
-SVM-Parameter:
-C=1.0, kernel='linear', degree=2, gamma=10, coef=0.0, shrinking=True, probability=False, tol=1e-05, cache_size=4000
-Teste SVM mit 3000 Testdaten:
-detection_rate= 0.8316666666666667
-
-Teache SVM mit 18000 Trainingsdaten:
-SVM-Parameter:
 C=1.0, kernel='poly', degree=2, gamma=1, coef=0.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
 Teste SVM mit 3000 Testdaten:
 detection_rate= 0.9563333333333334
@@ -182,6 +127,10 @@ SVM-Parameter:
 C=1.0, kernel='poly', degree=2, gamma=10, coef=0.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
 Teste SVM mit 3000 Testdaten:
 detection_rate= 0.9563333333333334
+
+
+
+
 
 Teache SVM mit 18000 Trainingsdaten:
 SVM-Parameter:
@@ -227,6 +176,65 @@ detection_rate= 0.6343333333333333
 
 Teache SVM mit 18000 Trainingsdaten:
 SVM-Parameter:
+C=1.0, kernel='poly', degree=4, gamma='auto', coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
+Teste SVM mit 3000 Testdaten:
+detection_rate= 0.5613333333333334
+
+Teache SVM mit 18000 Trainingsdaten:
+SVM-Parameter:
+C=1.0, kernel='poly', degree=4, gamma=0.1, coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
+Teste SVM mit 3000 Testdaten:
+detection_rate= 0.9326666666666666
+
+Teache SVM mit 18000 Trainingsdaten:
+SVM-Parameter:
+C=1.0, kernel='poly', degree=4, gamma=0.0001, coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
+Teste SVM mit 3000 Testdaten:
+detection_rate= 0.8723333333333333
+
+
+
+
+
+
+Teache SVM mit 18000 Trainingsdaten:
+SVM-Parameter:
+C=1.0, kernel='poly', degree=9, gamma='auto', coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
+Teste SVM mit 3000 Testdaten:
+detection_rate= 0.204
+
+Teache SVM mit 18000 Trainingsdaten:
+SVM-Parameter:
+C=1.0, kernel='poly', degree=9, gamma=0.1, coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
+Teste SVM mit 3000 Testdaten:
+detection_rate= 0.942
+
+Teache SVM mit 18000 Trainingsdaten:
+SVM-Parameter:
+C=1.0, kernel='poly', degree=9, gamma=0.0001, coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
+Teste SVM mit 3000 Testdaten:
+detection_rate= 0.808
+
+Teache SVM mit 18000 Trainingsdaten:
+SVM-Parameter:
+C=1.0, kernel='rbf', degree=9, gamma='auto', coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
+Teste SVM mit 3000 Testdaten:
+detection_rate= 0.10433333333333333
+
+Teache SVM mit 18000 Trainingsdaten:
+SVM-Parameter:
+C=1.0, kernel='rbf', degree=9, gamma=0.1, coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
+Teste SVM mit 3000 Testdaten:
+detection_rate= 0.10433333333333333
+
+Teache SVM mit 18000 Trainingsdaten:
+SVM-Parameter:
+C=1.0, kernel='rbf', degree=9, gamma=0.0001, coef=1.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
+Teste SVM mit 3000 Testdaten:
+detection_rate= 0.10433333333333333
+
+Teache SVM mit 18000 Trainingsdaten:
+SVM-Parameter:
 C=1.0, kernel='poly', degree=9, gamma=1, coef=0.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
 Teste SVM mit 3000 Testdaten:
 detection_rate= 0.8663333333333333
@@ -248,6 +256,13 @@ SVM-Parameter:
 C=1.0, kernel='poly', degree=9, gamma=0.001, coef=0.0, shrinking=True, probability=False, tol=0.001, cache_size=4000
 Teste SVM mit 3000 Testdaten:
 detection_rate= 0.7733333333333333
+
+
+
+
+
+
+
 
 Teache SVM mit 18000 Trainingsdaten:
 SVM-Parameter:
@@ -273,3 +288,292 @@ C=1.0, kernel='rbf', degree=9, gamma=0.001, coef=0.0, shrinking=True, probabilit
 Teste SVM mit 3000 Testdaten:
 detection_rate= 0.10433333333333333
 
+---------------------------------------------- 28.01.2018, 20 Uhr -------------------------------------------------
+18000 3000 1.0 'poly' 2 5e-06 0.0 True False 0.001 4000 0.6266666666666667
+18000 3000 1.0 'poly' 2 5e-05 0.0 True False 0.001 4000 0.6556666666666666
+18000 3000 1.0 'poly' 2 0.0005 0.0 True False 0.001 4000 0.6743333333333333
+18000 3000 1.0 'poly' 2 0.005 0.0 True False 0.001 4000 0.9093333333333333
+18000 3000 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9556666666666667
+18000 3000 1.0 'poly' 2 0.5 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 5 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 50 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 500 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.004 0.0 True False 0.001 4000 0.8956666666666667
+18000 3000 1.0 'poly' 2 0.008 0.0 True False 0.001 4000 0.9323333333333333
+18000 3000 1.0 'poly' 2 0.012 0.0 True False 0.001 4000 0.9423333333333334
+18000 3000 1.0 'poly' 2 0.016 0.0 True False 0.001 4000 0.9476666666666667
+18000 3000 1.0 'poly' 2 0.02 0.0 True False 0.001 4000 0.9506666666666667
+18000 3000 1.0 'poly' 2 0.024 0.0 True False 0.001 4000 0.952
+18000 3000 1.0 'poly' 2 0.028 0.0 True False 0.001 4000 0.952
+18000 3000 1.0 'poly' 2 0.032 0.0 True False 0.001 4000 0.9523333333333334
+18000 3000 1.0 'poly' 2 0.036 0.0 True False 0.001 4000 0.953
+18000 3000 1.0 'poly' 2 0.04 0.0 True False 0.001 4000 0.9546666666666667
+18000 3000 1.0 'poly' 2 0.044 0.0 True False 0.001 4000 0.955
+18000 3000 1.0 'poly' 2 0.048 0.0 True False 0.001 4000 0.955
+18000 3000 1.0 'poly' 2 0.052 0.0 True False 0.001 4000 0.9556666666666667
+18000 3000 1.0 'poly' 2 0.056 0.0 True False 0.001 4000 0.9556666666666667
+18000 3000 1.0 'poly' 2 0.06 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.064 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.068 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.072 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.076 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.08 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.084 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.088 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.092 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.096 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.1 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.104 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.108 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.112 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.116 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.12 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.124 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.128 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.132 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.136 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.14 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.144 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.148 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.152 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.156 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.16 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.164 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.168 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.172 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.176 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.18 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.184 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.188 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.192 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.196 0.0 True False 0.001 4000 0.9563333333333334
+18000 3000 1.0 'poly' 2 0.2 0.0 True False 0.001 4000 0.9563333333333334
+
+18000 3000 1.0 'poly' 2 1 4 True False 0.001 4000 0.9493333333333334
+18000 3000 1.0 'poly' 2 1 8 True False 0.001 4000 0.9383333333333334
+18000 3000 1.0 'poly' 2 1 12 True False 0.001 4000 0.9216666666666666
+18000 3000 1.0 'poly' 2 1 16 True False 0.001 4000 0.9013333333333333
+18000 3000 1.0 'poly' 2 1 20 True False 0.001 4000 0.8806666666666667
+18000 3000 1.0 'poly' 2 1 24 True False 0.001 4000 0.863
+18000 3000 1.0 'poly' 2 1 28 True False 0.001 4000 0.8443333333333334
+18000 3000 1.0 'poly' 2 1 32 True False 0.001 4000 0.8266666666666667
+18000 3000 1.0 'poly' 2 1 36 True False 0.001 4000 0.808
+18000 3000 1.0 'poly' 2 1 40 True False 0.001 4000 0.7886666666666666
+18000 3000 1.0 'poly' 2 1 44 True False 0.001 4000 0.7736666666666666
+18000 3000 1.0 'poly' 2 1 48 True False 0.001 4000 0.7566666666666667
+18000 3000 1.0 'poly' 2 1 52 True False 0.001 4000 0.7436666666666667
+18000 3000 1.0 'poly' 2 1 56 True False 0.001 4000 0.7296666666666667
+18000 3000 1.0 'poly' 2 1 60 True False 0.001 4000 0.7176666666666667
+18000 3000 1.0 'poly' 2 1 64 True False 0.001 4000 0.7046666666666667
+18000 3000 1.0 'poly' 2 1 68 True False 0.001 4000 0.694
+18000 3000 1.0 'poly' 2 1 72 True False 0.001 4000 0.6856666666666666
+18000 3000 1.0 'poly' 2 1 76 True False 0.001 4000 0.6743333333333333
+18000 3000 1.0 'poly' 2 1 80 True False 0.001 4000 0.6633333333333333
+18000 3000 1.0 'poly' 2 1 84 True False 0.001 4000 0.653
+18000 3000 1.0 'poly' 2 1 88 True False 0.001 4000 0.646
+18000 3000 1.0 'poly' 2 1 92 True False 0.001 4000 0.639
+18000 3000 1.0 'poly' 2 1 96 True False 0.001 4000 0.6306666666666667
+18000 3000 1.0 'poly' 2 1 100 True False 0.001 4000 0.6203333333333333
+
+
+---------------------------------- 28.01.18, 22:18 Uhr -----------------------------------------
+18000 3000 1.0 'poly' 2 0.0040000000000000001 60 True False 0.001 4000 0.497
+18000 3000 1.0 'poly' 2 0.0080000000000000002 60 True False 0.001 4000 0.4086666666666667
+18000 3000 1.0 'poly' 2 0.012 60 True False 0.001 4000 0.37133333333333335
+18000 3000 1.0 'poly' 2 0.016 60 True False 0.001 4000 0.359
+18000 3000 1.0 'poly' 2 0.02 60 True False 0.001 4000 0.349
+18000 3000 1.0 'poly' 2 0.024 60 True False 0.001 4000 0.3433333333333333
+18000 3000 1.0 'poly' 2 0.028000000000000001 60 True False 0.001 4000 0.3406666666666667
+18000 3000 1.0 'poly' 2 0.032000000000000001 60 True False 0.001 4000 0.3416666666666667
+18000 3000 1.0 'poly' 2 0.036000000000000004 60 True False 0.001 4000 0.3413333333333333
+18000 3000 1.0 'poly' 2 0.040000000000000001 60 True False 0.001 4000 0.3416666666666667
+18000 3000 1.0 'poly' 2 0.043999999999999997 60 True False 0.001 4000 0.343
+18000 3000 1.0 'poly' 2 0.048000000000000001 60 True False 0.001 4000 0.3443333333333333
+18000 3000 1.0 'poly' 2 0.052000000000000005 60 True False 0.001 4000 0.346
+18000 3000 1.0 'poly' 2 0.056000000000000001 60 True False 0.001 4000 0.3473333333333333
+18000 3000 1.0 'poly' 2 0.059999999999999998 60 True False 0.001 4000 0.3496666666666667
+18000 3000 1.0 'poly' 2 0.064000000000000001 60 True False 0.001 4000 0.3506666666666667
+18000 3000 1.0 'poly' 2 0.068000000000000005 60 True False 0.001 4000 0.3526666666666667
+18000 3000 1.0 'poly' 2 0.072000000000000008 60 True False 0.001 4000 0.35233333333333333
+18000 3000 1.0 'poly' 2 0.075999999999999998 60 True False 0.001 4000 0.355
+18000 3000 1.0 'poly' 2 0.080000000000000002 60 True False 0.001 4000 0.3536666666666667
+18000 3000 1.0 'poly' 2 0.084000000000000005 60 True False 0.001 4000 0.3566666666666667
+18000 3000 1.0 'poly' 2 0.087999999999999995 60 True False 0.001 4000 0.3586666666666667
+18000 3000 1.0 'poly' 2 0.091999999999999998 60 True False 0.001 4000 0.361
+18000 3000 1.0 'poly' 2 0.096000000000000002 60 True False 0.001 4000 0.3636666666666667
+18000 3000 1.0 'poly' 2 0.10000000000000001 60 True False 0.001 4000 0.36533333333333334
+18000 3000 1.0 'poly' 2 0.10400000000000001 60 True False 0.001 4000 0.36833333333333335
+18000 3000 1.0 'poly' 2 0.108 60 True False 0.001 4000 0.36933333333333335
+18000 3000 1.0 'poly' 2 0.112 60 True False 0.001 4000 0.37233333333333335
+18000 3000 1.0 'poly' 2 0.11600000000000001 60 True False 0.001 4000 0.37433333333333335
+18000 3000 1.0 'poly' 2 0.12 60 True False 0.001 4000 0.37666666666666665
+18000 3000 1.0 'poly' 2 0.124 60 True False 0.001 4000 0.37766666666666665
+18000 3000 1.0 'poly' 2 0.128 60 True False 0.001 4000 0.37966666666666665
+18000 3000 1.0 'poly' 2 0.13200000000000001 60 True False 0.001 4000 0.38133333333333336
+18000 3000 1.0 'poly' 2 0.13600000000000001 60 True False 0.001 4000 0.384
+18000 3000 1.0 'poly' 2 0.14000000000000001 60 True False 0.001 4000 0.38433333333333336
+18000 3000 1.0 'poly' 2 0.14400000000000002 60 True False 0.001 4000 0.387
+18000 3000 1.0 'poly' 2 0.14799999999999999 60 True False 0.001 4000 0.38866666666666666
+18000 3000 1.0 'poly' 2 0.152 60 True False 0.001 4000 0.3923333333333333
+18000 3000 1.0 'poly' 2 0.156 60 True False 0.001 4000 0.39666666666666667
+18000 3000 1.0 'poly' 2 0.16 60 True False 0.001 4000 0.3993333333333333
+18000 3000 1.0 'poly' 2 0.16400000000000001 60 True False 0.001 4000 0.40066666666666667
+18000 3000 1.0 'poly' 2 0.16800000000000001 60 True False 0.001 4000 0.4043333333333333
+18000 3000 1.0 'poly' 2 0.17200000000000001 60 True False 0.001 4000 0.4073333333333333
+18000 3000 1.0 'poly' 2 0.17599999999999999 60 True False 0.001 4000 0.4093333333333333
+18000 3000 1.0 'poly' 2 0.17999999999999999 60 True False 0.001 4000 0.4106666666666667
+18000 3000 1.0 'poly' 2 0.184 60 True False 0.001 4000 0.414
+18000 3000 1.0 'poly' 2 0.188 60 True False 0.001 4000 0.4166666666666667
+18000 3000 1.0 'poly' 2 0.192 60 True False 0.001 4000 0.41933333333333334
+18000 3000 1.0 'poly' 2 0.19600000000000001 60 True False 0.001 4000 0.4196666666666667
+18000 3000 1.0 'poly' 2 0.20000000000000001 60 True False 0.001 4000 0.423
+18000 3000 1.0 'poly' 2 0.004 4 True False 0.001 4000 0.633
+18000 3000 1.0 'poly' 2 0.004 8 True False 0.001 4000 0.5083333333333333
+18000 3000 1.0 'poly' 2 0.004 12 True False 0.001 4000 0.4716666666666667
+18000 3000 1.0 'poly' 2 0.004 16 True False 0.001 4000 0.4723333333333333
+18000 3000 1.0 'poly' 2 0.004 20 True False 0.001 4000 0.4716666666666667
+18000 3000 1.0 'poly' 2 0.004 24 True False 0.001 4000 0.469
+18000 3000 1.0 'poly' 2 0.004 28 True False 0.001 4000 0.47333333333333333
+18000 3000 1.0 'poly' 2 0.004 32 True False 0.001 4000 0.4703333333333333
+18000 3000 1.0 'poly' 2 0.004 36 True False 0.001 4000 0.4703333333333333
+18000 3000 1.0 'poly' 2 0.004 40 True False 0.001 4000 0.47433333333333333
+18000 3000 1.0 'poly' 2 0.004 44 True False 0.001 4000 0.4766666666666667
+18000 3000 1.0 'poly' 2 0.004 48 True False 0.001 4000 0.484
+18000 3000 1.0 'poly' 2 0.004 52 True False 0.001 4000 0.486
+18000 3000 1.0 'poly' 2 0.004 56 True False 0.001 4000 0.48966666666666664
+18000 3000 1.0 'poly' 2 0.004 60 True False 0.001 4000 0.497
+18000 3000 1.0 'poly' 2 0.004 64 True False 0.001 4000 0.5043333333333333
+18000 3000 1.0 'poly' 2 0.004 68 True False 0.001 4000 0.5096666666666667
+18000 3000 1.0 'poly' 2 0.004 72 True False 0.001 4000 0.5173333333333333
+18000 3000 1.0 'poly' 2 0.004 76 True False 0.001 4000 0.5243333333333333
+18000 3000 1.0 'poly' 2 0.004 80 True False 0.001 4000 0.5303333333333333
+18000 3000 1.0 'poly' 2 0.004 84 True False 0.001 4000 0.5333333333333333
+18000 3000 1.0 'poly' 2 0.004 88 True False 0.001 4000 0.5383333333333333
+18000 3000 1.0 'poly' 2 0.004 92 True False 0.001 4000 0.5453333333333333
+18000 3000 1.0 'poly' 2 0.004 96 True False 0.001 4000 0.5536666666666666
+18000 3000 1.0 'poly' 2 0.004 100 True False 0.001 4000 0.5586666666666666
+18000 3000 1.0 'poly' 2 0.004 104 True False 0.001 4000 0.565
+18000 3000 1.0 'poly' 2 0.004 108 True False 0.001 4000 0.568
+18000 3000 1.0 'poly' 2 0.004 112 True False 0.001 4000 0.5683333333333334
+18000 3000 1.0 'poly' 2 0.004 116 True False 0.001 4000 0.5733333333333334
+18000 3000 1.0 'poly' 2 0.004 120 True False 0.001 4000 0.577
+18000 3000 1.0 'poly' 2 0.004 124 True False 0.001 4000 0.5826666666666667
+18000 3000 1.0 'poly' 2 0.004 128 True False 0.001 4000 0.5873333333333334
+18000 3000 1.0 'poly' 2 0.004 132 True False 0.001 4000 0.593
+18000 3000 1.0 'poly' 2 0.004 136 True False 0.001 4000 0.602
+18000 3000 1.0 'poly' 2 0.004 140 True False 0.001 4000 0.6076666666666667
+18000 3000 1.0 'poly' 2 0.004 144 True False 0.001 4000 0.614
+18000 3000 1.0 'poly' 2 0.004 148 True False 0.001 4000 0.6166666666666667
+18000 3000 1.0 'poly' 2 0.004 152 True False 0.001 4000 0.6226666666666667
+18000 3000 1.0 'poly' 2 0.004 156 True False 0.001 4000 0.6253333333333333
+18000 3000 1.0 'poly' 2 0.004 160 True False 0.001 4000 0.628
+18000 3000 1.0 'poly' 2 0.004 164 True False 0.001 4000 0.6323333333333333
+18000 3000 1.0 'poly' 2 0.004 168 True False 0.001 4000 0.6363333333333333
+18000 3000 1.0 'poly' 2 0.004 172 True False 0.001 4000 0.6406666666666667
+18000 3000 1.0 'poly' 2 0.004 176 True False 0.001 4000 0.6423333333333333
+18000 3000 1.0 'poly' 2 0.004 180 True False 0.001 4000 0.6483333333333333
+18000 3000 1.0 'poly' 2 0.004 184 True False 0.001 4000 0.6503333333333333
+18000 3000 1.0 'poly' 2 0.004 188 True False 0.001 4000 0.6553333333333333
+18000 3000 1.0 'poly' 2 0.004 192 True False 0.001 4000 0.6543333333333333
+18000 3000 1.0 'poly' 2 0.004 196 True False 0.001 4000 0.6563333333333333
+18000 3000 1.0 'poly' 2 0.004 200 True False 0.001 4000 0.6596666666666666
+600 100 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.91
+1200 200 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.925
+1800 300 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9333333333333333
+2400 400 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.925
+3000 500 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.936
+3600 600 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9333333333333333
+4200 700 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9442857142857143
+4800 800 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9425
+5400 900 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9422222222222222
+6000 1000 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.941
+6600 1100 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9481818181818182
+7200 1200 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9383333333333334
+7800 1300 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9392307692307692
+8400 1400 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9428571428571428
+9000 1500 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9466666666666667
+9600 1600 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9475
+10200 1700 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9488235294117647
+10800 1800 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.95
+11400 1900 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9536842105263158
+12000 2000 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.953
+12600 2100 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.95
+13200 2200 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9486363636363636
+13800 2300 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9504347826086956
+14400 2400 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9525
+15000 2500 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9512
+15600 2600 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9546153846153846
+16200 2700 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9548148148148148
+16800 2800 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9582142857142857
+17400 2900 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9593103448275863
+18000 3000 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.959
+18600 3100 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9612903225806452
+19200 3200 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9603125
+19800 3300 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9615151515151515
+20400 3400 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9629411764705882
+21000 3500 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9645714285714285
+21600 3600 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9641666666666666
+22200 3700 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9643243243243244
+22800 3800 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9657894736842105
+23400 3900 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9656410256410256
+24000 4000 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.96525
+24600 4100 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9648780487804878
+25200 4200 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9664285714285714
+25800 4300 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9658139534883721
+26400 4400 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9656818181818182
+27000 4500 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9666666666666667
+27600 4600 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9669565217391304
+28200 4700 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9672340425531915
+28800 4800 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9679166666666666
+29400 4900 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9679591836734693
+30000 5000 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9686
+30600 5100 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9688235294117648
+31200 5200 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.97
+31800 5300 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.970377358490566
+32400 5400 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9718518518518519
+33000 5500 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9727272727272728
+33600 5600 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9732142857142857
+34200 5700 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.973859649122807
+34800 5800 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.975
+35400 5900 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9752542372881355
+36000 6000 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9735
+36600 6100 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9739344262295082
+37200 6200 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9748387096774194
+37800 6300 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9747619047619047
+38400 6400 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.97578125
+39000 6500 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9755384615384616
+39600 6600 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9748484848484849
+40200 6700 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9752238805970149
+40800 6800 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.975735294117647
+41400 6900 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9756521739130435
+42000 7000 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9758571428571429
+42600 7100 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.976338028169014
+43200 7200 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.97625
+43800 7300 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9761643835616438
+44400 7400 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9767567567567568
+45000 7500 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9769333333333333
+45600 7600 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9773684210526316
+46200 7700 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9776623376623377
+46800 7800 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9780769230769231
+47400 7900 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9788607594936709
+48000 8000 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.978625
+48600 8100 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9783950617283951
+49200 8200 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.978170731707317
+49800 8300 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9792771084337349
+50400 8400 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9794047619047619
+51000 8500 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9794117647058823
+51600 8600 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9797674418604652
+52200 8700 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9797701149425287
+52800 8800 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9798863636363636
+53400 8900 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9805617977528089
+54000 9000 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.981
+54600 9100 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9806593406593407
+55200 9200 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9809782608695652
+55800 9300 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9812903225806452
+56400 9400 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9809574468085106
+57000 9500 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.980421052631579
+57600 9600 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9804166666666667
+58200 9700 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9804123711340206
+58800 9800 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9798979591836735
+59400 9900 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9802020202020202
+60000 10000 1.0 'poly' 2 0.05 0.0 True False 0.001 4000 0.9806
