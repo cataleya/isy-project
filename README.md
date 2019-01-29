@@ -184,6 +184,10 @@ wichtig: nicht alle Parameter sind unabhängig voneinander. Nur die unabhängige
 ## Ergebnisse
 Hier folgt die Ergebnisdiskussion
 
+Ergebnisse der Netze aus Paper:
+
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/netze_paper.png)
+
 Vergleich von Erkennungsraten und Rechenaufwand von SVM und NN / CNN
 
 > With some classification methods (particuarly template-based methods, such as SVM and K-nearest neighbors), the error rate improves when the digits are centered by bounding box rather than center of mass. If you do this kind of pre-processing, you should report it in your publications.
