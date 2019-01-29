@@ -3,43 +3,38 @@
 - Andreas Hallmann
 - Katharina Krebs
 ## Projektbeschreibung
-Ziel des Projekts ist die Auseinandersetzung mit verschiedenen Methoden des maschinellen Lernens anhand des MNIST-Datensatzes.
-// Beschreibung
-
+Im Rahmen des Kurses Interactive Systems an der Beuth Hochschule werden verschiedene Aspekte des maschinellen Lernens beleuchtet. Ziel dieses Projekts ist eine weitere Auseinandersetzung mit verschiedenen Methoden, wie Support Vector Machines und neuronale Netze. Für dieses Projekt wird der MNIST-Datensatzes verwendet.
 ## Stand der Technik - Erkennung von handgeschriebenen Ziffern
-
-## Implementierung
-Hier folgt die Beschreibung der Umsetzung
+Die Erkennung von handgeschriebenen Ziffern ist gut erforscht, dieses Beispiel wird in Verbindung mit dem MNIST-Datensatz zum Trainieren und Testen von Modellen im Bereich des maschinellen Lernens verwendet.
 ### Datensatz 
-// Katharina
-Bilddaten von handgeschriebenen Ziffern von 0–9:
-- Graustufen (0-255): ursprünglich black and white 20 x 20 pixel box, aspect ratio wurde eingehalten
-- Vereinheitlichte, konstante Bildgröße (28 x 28 Pixel)
-- Zentrierung der Ziffern auf dem Bild: entered in a 28x28 image by computing the center of mass of the pixels, and translating the image so as to position this point at the center of the 28x28 field
+Der MNIST-Datensatz enthält Bilddaten von handgeschiebenen Ziffen von 0 bis 9 in Graustufen (Pixelwerte von 0 bis 255).
+Er basiert auf dem ursprünglichen NIST-Datensatz (Quelle: https://www.nist.gov/sites/default/files/documents/srd/nistsd19.pdf), der für die bessere Nutzung normalisiert und optimiert wurde. Die Bildgröße wurde von 20px * 20px auf 28px * 28px gebracht, wobei das Verhältnis der Bilder beibehalten wurde. Die schwarz-weiss-Bilder wurden in Graustufen umgerechnet. Bei der Optimierung wurden weiterhin die Ziffen auf den Bildern zentriert (center of mass Berechnung).
 
+Der Datensatz ist wiefolgt aufgebaut:
 - 60.000 Training Samples 
 - 10.000 Test Samples
 
-![](https://github.com/cataleya/isy-project/blob/master/img/documentation/Example-images-from-the-MNIST-dataset.png)
-
 4 Datensets:
-Training set images
-Training set labels
-Test set images
-Test set labels
-
-siehe auch: https://github.com/datapythonista/mnist
+- Training set images 
+- Training set labels
+- Test set images
+- Test set labels
 
 Das Keras Framework stellt den Import des MNIST-Datensatzes bereit. 
 Rückgabewert: 
 2 tuples:
-x_train, x_test: uint8 array of grayscale image data with shape (num_samples, 28, 28).
+X_train, X_test: uint8 array of grayscale image data with shape (num_samples, 28, 28).
 y_train, y_test: uint8 array of digit labels (integers in range 0-9) with shape (num_samples,).
 
 siehe (https://keras.io/datasets/)
 
+Beispielbilder des Datensatzes:
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/Example-images-from-the-MNIST-dataset.png)
+
+## Implementierung
+Folgend werden die verschiedenen Implementierungen und Test des MNIST-Datensatzes beschrieben.
+
 ### Support Vector Machine
-// Andreas
 Hyperparameter: Anzahl der Keypoints, Größe der Features,
 Classifiers (C, ... gamma ..) -> Korrelation der Werte
 https://scikit-learn.org/stable/modules/classes.html#module-sklearn.svm
