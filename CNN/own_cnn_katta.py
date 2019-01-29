@@ -96,7 +96,7 @@ def own_cnn(X_train_all, y_train_all, X_test_all, y_test_all, X_train, y_train, 
 
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-    log_datei = 'training.log'
+    log_datei = 'training_katta.log'
     csv_logger = CSVLogger(log_datei, separator=',', append=True)
 
     hist = model.fit(X_train, y_train, batch_size=batch_size, epochs=epochs,
