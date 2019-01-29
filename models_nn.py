@@ -2,11 +2,21 @@ from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.utils import to_categorical
+from utils import plot_utils
 import matplotlib.pyplot as plt
 import numpy as np
 
 # models from "Deep Big Simple Neural Nets Excel on Hand- written Digit Recognition"
 # https://arxiv.org/pdf/1003.0358.pdf
+
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+#preprocessing training data
+row, col = 28, 28
+X_train = X_train.reshape(60000, row * col)
+X_test = X_test.reshape(10000, row * col)
+print(X_train.shape)
+print(X_test.shape)
 
 classes = 10
 
