@@ -43,6 +43,23 @@ print('X_test: ',y_test.shape)
 log_datei = 'training.log'
 
 f = open(log_datei, 'a')
+f.write('Parameter der nächsten 5 Trainings: batch_size = [32, 128, 512, 1024] mit Dropout ... = [64] ohne Dropout\n')
+f.close()
+
+for ii in [32, 128, 512, 1024]:
+    own_cnn(X_train_all, y_train_all, X_test_all, y_test_all, X_train, y_train, X_test, y_test, classes=10,
+            batch_size=ii, epochs=20, num_conv_layer_per_pooling=2, num_of_poolings=2,
+            pool_size=2, kernel_size=3, padding='same', activation='relu',
+            list_of_kernel_numbers=[32, 64, 128, 256], dense_layers=4, neurons_in_dense_layer=512, dropout=1)
+
+own_cnn(X_train_all, y_train_all, X_test_all, y_test_all, X_train, y_train, X_test, y_test, classes=10,
+			batch_size=64, epochs=20, num_conv_layer_per_pooling=2, num_of_poolings=2,
+            pool_size=2, kernel_size=3, padding='same', activation='relu',
+            list_of_kernel_numbers=[32, 64, 128, 256], dense_layers=4, neurons_in_dense_layer=512, dropout=0)
+
+
+
+f = open(log_datei, 'a')
 f.write('Parameter der nächsten 2 Trainings: pool_size = [1] mit Dropout ... = [1] ohne Dropout\n')
 f.close()
 
@@ -55,6 +72,7 @@ own_cnn(X_train_all, y_train_all, X_test_all, y_test_all, X_train, y_train, X_te
             batch_size=64, epochs=20, num_conv_layer_per_pooling=2, num_of_poolings=3,
             pool_size=1, kernel_size=3, padding='same', activation='relu',
             list_of_kernel_numbers=[32, 64, 128, 256], dense_layers=4, neurons_in_dense_layer=1024, dropout=0)
+
 
 
 
