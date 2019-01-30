@@ -1,0 +1,27 @@
+% conv layers Serie
+home
+close all
+
+
+figure(1)
+
+% (gamma*<x, x'> + r)^d
+scatter(poly2c0variiert(:,2), poly2c0variiert(:,3)) % gamma = 1
+hold on
+scatter(poly2c0variiert2(:,2), poly2c0variiert2(:,3))
+legend('\gamma = 1.000', '\gamma = 0.004')
+title('Variation von r', 'FontSize', 14)
+xlabel('r') 
+ylabel('Erkennungsrate') 
+
+
+figure(2)
+% r = 0
+% (gamma*<x, x'> + r)^d
+scatter(poly2c0variiert(:,2), poly2c0variiert(:,3))
+hold on
+scatter(poly2c0variiert2(:,2), poly2c0variiert2(:,3))
+legend('\gamma = 1.000', '\gamma = 0.004')
+title('Variation von r', 'FontSize', 14)
+xlabel('r') 
+ylabel('Erkennungsrate') 
