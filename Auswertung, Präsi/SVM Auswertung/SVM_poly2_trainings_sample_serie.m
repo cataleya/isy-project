@@ -1,0 +1,17 @@
+% conv layers Serie
+home
+close all
+
+
+trainings_samples(:,1) = poly2AnzahlTrainingsdatenvariiert(:,1)
+
+acc(:,1) = poly2AnzahlTrainingsdatenvariiert(:,5)
+
+figure(1)
+plot(trainings_samples(:,1), acc(:,1), 'o', 'LineWidth', 1.5)
+hold off
+
+title('Variation der Trainings samples', 'FontSize', 14)
+xlabel('Anzahl Trainingsdaten') 
+ylabel('Erkennungsrate') 
+% legend('BLAAA')
