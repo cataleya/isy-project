@@ -42,31 +42,6 @@ print('X_test: ',y_test.shape)
 ############# TRAININGSCENTER ###################
 log_datei = 'training.log'
 
-f = open(log_datei, 'a')
-f.write('Parameter der nächsten 5 Trainings: batch_size = [32, 128, 512, 1024] mit Dropout ... = [256] ohne Dropout\n')
-f.close()
-
-
-f = open(log_datei, 'a')
-f.write('Parameter der nächsten 3 Trainings: pool_size = [1,3] mit Dropout ... = [1] ohne Dropout\n')
-f.close()
-
-own_cnn(X_train_all, y_train_all, X_test_all, y_test_all, X_train, y_train, X_test, y_test, classes=10,
-            batch_size=64, epochs=20, num_conv_layer_per_pooling=2, num_of_poolings=3,
-            pool_size=1, kernel_size=3, padding='same', activation='relu',
-            list_of_kernel_numbers=[32, 64, 128, 256], dense_layers=4, neurons_in_dense_layer=1024, dropout=1)
-
-own_cnn(X_train_all, y_train_all, X_test_all, y_test_all, X_train, y_train, X_test, y_test, classes=10,
-            batch_size=64, epochs=20, num_conv_layer_per_pooling=2, num_of_poolings=3,
-            pool_size=3, kernel_size=3, padding='same', activation='relu',
-            list_of_kernel_numbers=[32, 64, 128, 256], dense_layers=4, neurons_in_dense_layer=1024, dropout=1)
-
-
-own_cnn(X_train_all, y_train_all, X_test_all, y_test_all, X_train, y_train, X_test, y_test, classes=10,
-            batch_size=64, epochs=20, num_conv_layer_per_pooling=2, num_of_poolings=3,
-            pool_size=1, kernel_size=3, padding='same', activation='relu',
-            list_of_kernel_numbers=[32, 64, 128, 256], dense_layers=4, neurons_in_dense_layer=1024, dropout=0)
-
 
 
 
