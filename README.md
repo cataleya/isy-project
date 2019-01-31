@@ -34,6 +34,7 @@ Beispielbilder des Datensatzes:
 
 ## Implementierung
 Folgend werden die verschiedenen Implementierungen und Test des MNIST-Datensatzes beschrieben.
+- Frage: hat bei mir die GPU mitgewirkt, oder nicht?
 
 ### Support Vector Machine
 Hyperparameter: Anzahl der Keypoints, Größe der Features,
