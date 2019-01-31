@@ -37,6 +37,9 @@ Folgend werden die verschiedenen Implementierungen und Test des MNIST-Datensatze
 - Frage: hat bei mir die GPU mitgewirkt, oder nicht?
 
 ### Support Vector Machine
+HOW TO RUN ON GPU:
+https://stackoverflow.com/questions/45662253/can-i-run-keras-model-on-gpu
+
 Hyperparameter: Anzahl der Keypoints, Größe der Features,
 Classifiers (C, ... gamma ..) -> Korrelation der Werte
 https://scikit-learn.org/stable/modules/classes.html#module-sklearn.svm
