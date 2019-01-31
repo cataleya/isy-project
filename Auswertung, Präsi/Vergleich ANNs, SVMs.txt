@@ -1,0 +1,17 @@
+PROS of SVMs:
+A significant advantage of SVMs is that whilst ANNs can suffer from multiple local minima, the solution to an SVM is global and unique.
+Unlike ANNs, the computational complexity of SVMs does not depend on the dimensionality of the input space.
+SVMs are less prone for overfitting
+need less memory to store the predictive model
+Fewer hyperparameters -> easier to find an accurate model
+
+
+PROS of NNs:
+They are extremely flexible in the types of data they can support. NNs learn data, the user doesn't have to manually derive them.
+
+
+
+beste Netze:
+CNN: 0.23 bzw. 99.77
+NN: 0.35 bzw. 99.65
+SVM: 0.56 bzw. 99.44
