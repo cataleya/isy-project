@@ -10,8 +10,31 @@ PROS of NNs:
 They are extremely flexible in the types of data they can support. NNs learn data, the user doesn't have to manually derive them.
 
 
+PROs of CNNs:
+schneller als NNs bzw. Speicheraufwand niedriger??? -> bei NNs müssen mehr Gewichte trainiert werden, bei CNNs sind in den vorderen layers nur die Kerneleinträge zu speichern 
+##################################################################################################################################
 
-beste Netze:
+
+Learnings:
+SVMs: schnell, die Erkennungsrate der SVM variiert stark mit den verwendeten Parametern, welche den Kernel bestimmen
+CNNs: viele Architekturen liefern Prediction Modelle mit hohen Erkennungsraten, Ar...langsam, bessere Erkennungsraten als bei SVMs
+NNs:
+
+
+
+- wie schneiden die Netze in Sachen Trainingsdauer ab?
+- Am Anfang Hypothese aufstellen: "Für die Erkennung von Ziffern aus Bildern 
+bieten verschiedene Machine Learning Algorithmen unterschiedlich gute Erkennungsraten
+und unterscheiden sich in der Trainingsdauer erheblich!"
+
+
+
+beste Netze (Papers):
 CNN: 0.23 bzw. 99.77
 NN: 0.35 bzw. 99.65
 SVM: 0.56 bzw. 99.44
+
+unsere Netze:
+CNN:
+NN:
+SVM: 98,1% poly2
