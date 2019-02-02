@@ -174,15 +174,15 @@ Man muss sich deshalb keine Gedanken machen, mit welchen Featurevektoren man das
 Als Input verwenden wir deshalb die 28x28 Graustufenpixelwerte der Bilder.
 
 In der folgenden Abbildung ist die Netzwerkarchitektur gezeigt, welche uns als Basis für weitere Variationen dient.
-![](https://github.com/cataleya/isy-project/blob/master/img/trainings/CNN_Basic_Architecture.png)
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/CNN_Basic_Architecture.png)
 Als weiteren Hyperparameter haben wir die Batchsize zur Verfügung, welche wir -- abgesehen von der Batch-Size-Serie -- zu 128 wählen. Die folgenden Architekturen wurden alle mit 2500 Trainingsdaten trainiert und jede Epoche mit 10000 Testdaten validiert.
 
 Als erstes haben wir untersucht, welchen Einfluss die Tiefe des *CNN's* hat. Dazu haben wir die Anzahl an hintereinanderfolgenden Conv-Conv-Pooling-Dropout-Schichten variiert. Die Ergebnisse sind in der folgenden Abbildung zu sehen, wobei wir 20 Epochen trainiert haben.
-![](https://github.com/cataleya/isy-project/blob/master/img/trainings/CNN_pooling_layer_serie.jpg)
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/CNN_pooling_layer_serie.jpg)
 Wie subjektiv erkannt werden kann, schneidet die Architektur, bei der wir die Dropout-Layers weggelassen haben, um ca. einen halben Prozent schlechter ab, als die Architekturen mit 1 bzw. 2 Schichten und mit Dropout-Layer.
 
 Als nächstes haben wir die Anzahl der conv-Layers pro Schicht variiert. Wie in der folgenden Abbildung zu sehen haben wir 1, 3, 4 und 5 conv-Layers ausprobiert.
-![](https://github.com/cataleya/isy-project/blob/master/img/trainings/CNN_conv_layers_serie)
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/CNN_conv_layers_serie)
 Dabei zeigt sich, dass die Netze mit 1 und 3 conv-Layers pro Schicht einen ähnlichen Trainingserfolg von 96 bis 98$\,$% aufweisen. Bei den Netzen mit 4 und 5 conv-Layers ist augenscheinlich ein Fehler aufgetreten, da sich die Erkennungsraten um 10$\,$% aufhalten, was einem zufälligen Raten gleichkommt. 
 
 Aus den ersten beiden Testreihen entnehmen wir, dass die Veränderung der Layeranzahl nahezu keinen Einfluss auf die Qualität des trainierten Netzes hat.
@@ -190,16 +190,16 @@ Aus den ersten beiden Testreihen entnehmen wir, dass die Veränderung der Layera
 Dagegen ist bei der Variation der im Folgenden betrachteten Parameter jeweils eine klare Auswirkung beobachtbar.
 
 Als nächstes haben wir die Poolgröße verändert.
-![](https://github.com/cataleya/isy-project/blob/master/img/trainings/CNN_pool_size_serie)
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/CNN_pool_size_serie)
 Mit einer Poolgröße von 3x3 Pixel benötigt das Netz weniger Epochen zum Training, als bei der Verwendung der 5x5 Poolgröße. Außerdem sieht man, dass die Verwendung von Dropout layers die benötigten Epochen zusätzlich reduziert.
 Allerdings kommen alle Architekturen nach 20 Epochen auf etwa dieselbe Erkennungsrate zwischen 96 und 97$\,$%.
 
 Einen noch stärker erkennbaren Einfluss auf das Training hat die Wahl der batch size, wie im folgenden Diagramm zu sehen.
-![](https://github.com/cataleya/isy-project/blob/master/img/trainings/CNN_pool_size_serie)
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/CNN_pool_size_serie)
 Bei der Verwendung einer zu großen batch size finden pro Epoche weniger back propagations statt. Dadurch läuft das Training schneller, jedoch benötigt man wie zu sehen auch mehr Epochen. Die Ergebnisse liegen zwischen 95 und 97$\,$%.
 
 Als letztes haben wir noch den Einfluss der Neuronenzahl in den dense layers variiert. Das Ergebnis ist im nachfolgenden Diagramm zu sehen.
-![](https://github.com/cataleya/isy-project/blob/master/img/trainings/CNN_neuronenzahl_serie)
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/CNN_neuronenzahl_serie)
 Klar ersichtlich ist, dass das Netz mit nur 8 Neuronen pro dense layer viel mehr Epochen benötigt und auch nach vielen Epochen noch keine gute Erkennungsrate erzielt. Mit steigender Anzahl der Neuronen steigt auch der Trainingserfolg pro Epoche und auch die letztendlich erreichte Erkennungsrate nach 20 Epochen an.
 
 
