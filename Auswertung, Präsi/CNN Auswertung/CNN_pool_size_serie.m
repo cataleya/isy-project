@@ -21,7 +21,7 @@ hold on
 plot(epochs(:,3), acc(:,3), 'LineWidth', 1.5)
 hold off
 
-title('Pool size', 'FontSize', 14)
+title('Pool Größe', 'FontSize', 14)
 xlabel('Epoche') 
 ylabel('Erkennungsrate') 
-legend('Pool size = 3', 'Pool size = 5', 'Pool size = 5, no dropout')
+legend('3x3', 'Pool size = 5x5', '5x5, ohne dropout layers')

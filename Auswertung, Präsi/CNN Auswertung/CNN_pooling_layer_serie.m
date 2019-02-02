@@ -22,7 +22,7 @@ hold on
 plot(epochs(:,3), acc(:,3), 'LineWidth', 1.5)
 hold off
 
-title('Anzahl Pooling Layers', 'FontSize', 14)
+title('Anzahl conv-conv-pooling-dropout Schichten', 'FontSize', 14)
 xlabel('Epoche') 
 ylabel('Erkennungsrate') 
-legend('1 P-Layer', '1 P-Layer, no dropout', '2 P-Layer')
+legend('1 Schicht', '1 Schicht, ohne dropout', '2 Schichten')
