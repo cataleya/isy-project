@@ -62,11 +62,19 @@ Für den Fall, dass die Trennflächen *Hyperebenen* sind, nennt man die Input-Da
 Die Idee hinter dem *Kernel-Trick* ist, die Trainingsvektoren aus dem Raum *X* in einen höherdimensionalen Raum *F* zu überführen, in dem sie dann linear trennbar sind. Es werden die Trennebenen berechnet und diese anschließend in den Raum *X* zurücktransformiert. Diese Rechenoperationen sind effizient mit den sogenannten Kernels durchführbar.
 (https://de.wikipedia.org/wiki/Support_Vector_Machine)
 
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/svmwiki.png)
+
 Wir haben verschiedene SVMs auf ihre erreichte Erkennungsrate hin untersucht. Die SVMs unterscheiden sich in der verwendeten Kernelfunktion und ihren Funktionsparametern. Als Kernelfunktionen haben wir lineare Funktionen und Polynome 2.,4. und 9. Grades benutzt.
 Die Funktion des linearen Kernels sieht dabei folgendermaßen aus: $<x, x'>$. 
 Die Polynom-Kernels haben folgende Gestalt: $(\gamma\cdot \langle x, x'\rangle + r)^d$
 
-Auswertung:
+Die mit linearem Kernel trainierte SVM erreichte eine Erkennungsrate beim Test mit den 10.000 Testdaten. von 84$\,$%.
+
+Mit den Polynom-Kernels haben wir jeweils verschiedene Kombinationen der Kernelfunktionsparameter $r$ und $\gamma$ durchprobiert.
+Die Ergebnisse sind in den folgenden Diagrammen und Tabellen dargestellt.
+
+
+
 
 Bisherige Virtual-SVMs haben eine Test-Fehlerrate von 0,56% erreicht (*Virtual SVM deg-9 poly*).
 Beste Fehlerrate mit *Reduced Set SVM deg 5 polynomial*: 1,0%
