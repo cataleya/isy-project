@@ -42,7 +42,6 @@ Die Berechnungen erfolgten auf folgenden Computern:
 - MacBook Pro (13-inch, Late 2011), Graphics: Intel HD Graphics 3000 512 MB
 
 ### Support Vector Machine
-
 *Support Vector Machines* (SVMs) sind hilfreich in zwei denkbaren Anwendungsfällen. Einerseits dienen sie als Regressor. Wir setzen sie jedoch als Klassifikatoren ein.
 
 Dabei haben sie gegenüber den mehrlagigen Perzeptronen folgende Vorteile:
@@ -73,7 +72,10 @@ Die mit linearem Kernel trainierte SVM erreichte eine Erkennungsrate beim Test m
 Mit den Polynom-Kernels haben wir jeweils verschiedene Kombinationen der Kernelfunktionsparameter $r$ und $\gamma$ durchprobiert.
 Die Ergebnisse sind in den folgenden Diagrammen und Tabellen dargestellt.
 
-
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/poly2_variation_von_gamma.jpg)
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/poly2_variation_von_r.jpg)
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/poly2_trainings_samples_serie.jpg)
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/svmpoly4,9.png)
 
 
 Bisherige Virtual-SVMs haben eine Test-Fehlerrate von 0,56% erreicht (*Virtual SVM deg-9 poly*).
