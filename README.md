@@ -3,12 +3,12 @@
 - Andreas Hallmann
 - Katharina Krebs
 ## Projektbeschreibung
-Im Rahmen des Kurses Interactive Systems an der Beuth Hochschule werden verschiedene Aspekte des maschinellen Lernens beleuchtet. Ziel dieses Projekts ist eine weitere Auseinandersetzung mit verschiedenen Methoden, wie Support Vector Machines und neuronale Netze. Für dieses Projekt wird der MNIST-Datensatzes verwendet.
+Im Rahmen des Kurses Interactive Systems an der Beuth Hochschule werden verschiedene Aspekte des maschinellen Lernens beleuchtet. Ziel dieses Projekts ist eine weitere Auseinandersetzung mit verschiedenen Methoden, wie Support Vector Machines, Multilayer Perceptron Nets und Convolutional Neural Nets. Für dieses Projekt wird der MNIST-Datensatz verwendet.
 ## Stand der Technik - Erkennung von handgeschriebenen Ziffern
 Die Erkennung von handgeschriebenen Ziffern ist gut erforscht, dieses Beispiel wird in Verbindung mit dem MNIST-Datensatz zum Trainieren und Testen von Modellen im Bereich des maschinellen Lernens verwendet.
 ### Datensatz 
 Der MNIST-Datensatz enthält Bilddaten von handgeschiebenen Ziffen von 0 bis 9 in Graustufen (Pixelwerte von 0 bis 255).
-Er basiert auf dem ursprünglichen NIST-Datensatz (Quelle: https://www.nist.gov/sites/default/files/documents/srd/nistsd19.pdf), der für die bessere Nutzung normalisiert und optimiert wurde. Die Bildgröße wurde von 20px * 20px auf 28px * 28px gebracht, wobei das Verhältnis der Bilder beibehalten wurde. Die schwarz-weiss-Bilder wurden in Graustufen umgerechnet. Bei der Optimierung wurden weiterhin die Ziffern auf den Bildern zentriert (center of mass Berechnung).
+Er basiert auf dem ursprünglichen NIST-Datensatz (Quelle: https://www.nist.gov/sites/default/files/documents/srd/nistsd19.pdf), der für die bessere Nutzung normalisiert und optimiert wurde. Die Bildgröße wurde von 20px * 20px auf 28px * 28px gebracht, wobei das Verhältnis der Bilder beibehalten wurde. Die schwarz-weiß-Bilder wurden in Graustufen umgerechnet. Bei der Optimierung wurden weiterhin die Ziffern auf den Bildern zentriert (center of mass Berechnung).
 
 (Dataset: http://yann.lecun.com/exdb/mnist/)
 
@@ -22,24 +22,25 @@ Der Datensatz ist wiefolgt aufgebaut:
 - Test set images
 - Test set labels
 
-Das Keras Framework stellt den Import des MNIST-Datensatzes bereit. 
+Die Keras API stellt eine FUnktion für den Import des MNIST-Datensatzes bereit. 
 
 Rückgabewert sind 2 Tupel:
 - X_train, X_test: uint8 array of grayscale image data with shape (num_samples, 28, 28).
 - y_train, y_test: uint8 array of digit labels (integers in range 0-9) with shape (num_samples,).
 (Quelle: https://keras.io/datasets/)
 
-Für die Berechnung der Modelle wurde die Anzahl der Trainings- und Testsamples, also die Anzahl der für das Training und das Testen des Modells verwendeten Bilder, variiert. Das Verkleinern der Trainingsmenge geschah vor allem aus Mangel der geeigneten Hardware um die Modelle schneller trainieren zu lassen.
+Für die Berechnung der Modelle wurde die Anzahl der Trainings- und Testsamples, also die Anzahl der für das Training und das Testen des Modells verwendeten Bilder, variiert. Das Verkleinern der Trainingsmenge geschah vor allem aus Mangel an geeigneter Hardware um die Modelle schneller trainieren zu lassen.
 
 Beispielbilder des Datensatzes:
 
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/Example-images-from-the-MNIST-dataset.png)
 
 ## Implementierung
-Folgend werden die verschiedenen Implementierungen und Test des MNIST-Datensatzes beschrieben.
+Folgend werden die verschiedenen Implementierungen und Tests des MNIST-Datensatzes beschrieben.
 
 Die Berechnungen erfolgten auf folgenden Computern:
-- MacBook Pro (13-inch, Late 2011), Graphics: Intel HD Graphics 3000 512 MB
+- MacBook Pro (13-inch, Late 2011), GPU: Intel HD Graphics 3000 512 MB
+- Lenovo T430s, GPU: Intel HD Graphics 4000
 
 ### Support Vector Machine
 *Support Vector Machines* (SVMs) sind hilfreich in zwei denkbaren Anwendungsfällen. Einerseits dienen sie als Regressor. Wir setzen sie jedoch als Klassifikatoren ein.
@@ -90,16 +91,16 @@ Die bisher beste veröffentlichte Virtual-SVM hat dazu im Vergleich eine Erkennu
 (DeCoste and Scholkopf (2002))
 
 
-### Neuronale Netze
+### Neuronale Netze (multilayer perceptrons)
 Neuronale Netze ahmen die Strukturen des menschlichen Gehirns nach. Die Grundidee dabei ist, dass Neuronen angesteuert und je nach Eingabewert eine Aktivierung des Neurons erfolgt oder nicht, was eine weitere Aktion auslöst, respektive nicht auslöst.
-Ziel des Einsatzes des neuronalen Netzes ist die Klassifizierung der Eingabewerte.
+Ziel des Einsatzes des neuronalen Netzes ist die Klassifizierung der Eingabedaten.
 
 Üblicherweise sind neuronale Netzwerke folgendermaßen aufgebaut:
-1. Input-Layer (In diesem Projekt die Daten aus MNIST)
+1. Input-Layer (In diesem Projekt die Graustufen-Pixel-Werte der Bilder)
 2. Hidden Layer (variabel in Anzahl der Layer und Anzahl der Neuronen)
 3. Output-Layer (In diesem Projekt 10 Klassen – die Ziffern 0 bis 9)
 
-Beispielsweise wird ein Bild der Ziffer 3 eingegeben, die Bilddaten werden gewichtet, durchlaufen verschiedene Layer und schließlich wird das Bild mit einer gewissen Wahrscheinlichkeit einer gewissen Klasse zugewiesen, zum Beispiel der Klasse Ziffer 3. Dies entspricht dann einer richtigen Klassifizierung.
+Beispielsweise wird ein Bild der Ziffer 3 eingegeben, die Bilddaten werden gewichtet, durchlaufen verschiedene Layer und schließlich wird jeder Klasse ein Wert zugeordnet, welcher die Wahrscheinlichkeit darstellt, dass die Eingabeziffer dieser Klasse entspricht.
  
  (http://pages.cs.wisc.edu/~bolo/shipyard/neural/local.html)
 
