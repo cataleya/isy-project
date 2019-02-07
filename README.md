@@ -211,12 +211,17 @@ Klar ersichtlich ist, dass das Netz mit nur 8 Neuronen pro dense layer viel mehr
 
 
 ## Ergebnisse
-Hier folgt die Ergebnisdiskussion
+Generell kann festgehalten werden, dass die Convolutional Neural Networks im Vergleich zu den Neural Networks schneller, zu besseren Ergebnissen führen. Dies ist darin begründet, dass die NN als klassischer Ansatz für die Klassifizierung von verschiednen Datenstrukturen verwendet werden kann, CNNs aber besonders geeignet für die Klassifizierung von Bilddaten sind. Der Erfolg der Support Vector Machines hingegen ist stark von den verwendeten Kernelparametern abhängig, SVM kann im Vergleich zu den Netzstrukturen schnell berechnet werden und kommt mit wenig Hyperparametern aus.
 
-Ergebnisse der Netze aus Paper:
+**Beste Erkennungsraten der getesteten Modelle** 
+- SVM: 98,1 % (Polynom 2. Grades, 60000 Trainingsdaten) 
+- NN: 98,2 % (NN1, 50 Epochen, 60000 Trainingsdaten) 
+- CNN: 97,4 % (20 Epochen, 2500 Trainingsdaten)
 
+In Vergleich dazu können die Ergebnisse aus verschiedenen Veröffentlichungen (Quelle: http://yann.lecun.com/exdb/mnist/) gesetzt werden: 
 
+- SVM: 99,4 % (Virtual SVM, deg-9 poly, 2-pixel jittered) 
+- NN: 99,65 % (6-layer, 784-2500-2000-1500-1000-500-10 (on GPU) [elastic distortions]) 
+- CNN: 99,7 % (35 conv. net, 1-20-P-40-P-150-10 [elastic distortions]) 
 
-Vergleich von Erkennungsraten und Rechenaufwand von SVM und NN / CNN
-
-> With some classification methods (particuarly template-based methods, such as SVM and K-nearest neighbors), the error rate improves when the digits are centered by bounding box rather than center of mass. If you do this kind of pre-processing, you should report it in your publications.
+Man sieht, dass die von uns erzeugten Ergebnisse um 1.3 % bei SVM, 1.45 % bei NN und 2.3 % bei CNN von den zuvor erzielten Werten abweichen. Die relativ starke Abweichung bei CNN lässt sich dadurch erklären, dass die im Paper verwendete Architektur wesentlich größer gewählt wurde, zusätzlich wurden auch wie bei NN die Daten vor dem Trainingsbeginn durch eine elastic distortion erweitert, was ebenfalls zu besseren Erkennungsraten führt.
