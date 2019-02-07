@@ -10,6 +10,8 @@ Die Erkennung von handgeschriebenen Ziffern ist gut erforscht, dieses Beispiel w
 Der MNIST-Datensatz enthält Bilddaten von handgeschiebenen Ziffen von 0 bis 9 in Graustufen (Pixelwerte von 0 bis 255).
 Er basiert auf dem ursprünglichen NIST-Datensatz (Quelle: https://www.nist.gov/sites/default/files/documents/srd/nistsd19.pdf), der für die bessere Nutzung normalisiert und optimiert wurde. Die Bildgröße wurde von 20px * 20px auf 28px * 28px gebracht, wobei das Verhältnis der Bilder beibehalten wurde. Die schwarz-weiss-Bilder wurden in Graustufen umgerechnet. Bei der Optimierung wurden weiterhin die Ziffern auf den Bildern zentriert (center of mass Berechnung).
 
+(Dataset: http://yann.lecun.com/exdb/mnist/)
+
 Der Datensatz ist wiefolgt aufgebaut:
 - 60.000 Training Samples 
 - 10.000 Test Samples
@@ -126,16 +128,7 @@ In diesem Projekt wurden zwei verschiedene Strukturen getestet, die auch im Pape
 Wie in der Tabelle zu sehen ist, ähneln sich die ersten 4 Netzstrukturen, es wird jeweils ein Layer mit 500 Neuronen vorgeschaltet. Die 5. Architektur hingegen besteht aus 9 Layern mit jeweils 1000 Neuronen + 10 (Outputlayer mit 10 Klassen).
 Die Ergebnisse zeigen, dass mit steigender Layer- und Neuronenanzahl auch die Erkennungsrate steigt, beziehungsweise der Test Error sinkt. 
 
-Es wurden für alle 5 Netzstrukturen eine Berechnung mit 3000 Trainings- und 1000 Testsamples durchgeführt.
-Die Modelle wurden zum einen über 30 Epochen, zum zweiten über 50 Epochen trainiert.
-
-Folgend sieht man die dazugehörigen Diagramme im Bezug Erkennungsrate zu Epoche:
-
-
-![](https://github.com/cataleya/isy-project/blob/master/img/documentation/nn3000_30.jpeg)
-![](https://github.com/cataleya/isy-project/blob/master/img/documentation/nn3000_50.jpeg)
-
-Beide Netzstrukturen wurden jeweils mit dem unveränderten MNIST-Datensatz über 30 und 50 Epochen trainiert.
+Beispielhaft sieht man hier die Strukturen für Architekturen mit ID 1 und ID 5:
 
 **Struktur 1: 1000, 500, 10**
 ```
@@ -160,7 +153,32 @@ nn5.add(Dense(1000, activation ='relu'))
 nn5.add(Dense(classes, activation='softmax'))
 nn5.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 ```
- 
+
+Es wurden für alle 5 Netzstrukturen eine Berechnung mit 3000 Trainings- und 1000 Testsamples durchgeführt.
+Die Modelle wurden zum einen über 30 Epochen, zum zweiten über 50 Epochen trainiert.
+
+Folgend sieht man die dazugehörigen Diagramme im Bezug Erkennungsrate zu Epoche:
+
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/nn3000_30_50.jpg)
+
+Man erkennt, dass sich die Daten für Architektur 1 bis 5 ähnlich sind und die Graphen ähnlich verlaufen. Die Architektur mit ID 5 sieht man immer wieder Ausreißer nach unten. 
+
+Für die Netzarchitekturen mit ID 1 und ID 5 (siehe Tabelle) wurden die Modelle weiterhin mit dem vollständigen unveränderten MNIST-Datensatz über 30 und 50 Epochen trainiert und getestet um zu sehen, ob sich die Erkennungsraten weiter steigern lassen, wenn die Trainingssample-Anzahl erhöht wird. 
+
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/nn1_nn5_30_50.jpg)
+
+Man erkennt, dass die Erkennungsrate von ca. 93 % auf ca. 98 % steigt. Man kann außerdem beobachten, dass sich die Ergebnisse durch Erhöhung der Epochen nicht wesentlich steigern lassen.
+
+In der folgenden Abbildung sind die Diagramme für Erkennungsraten und Lossfunktionen für die Architekturen 1 und 5 gegenübergestellt, beide Architekturen mit dem vollständigen Datensatz und über 50 Eprochen trainiert:
+
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/nn1nn5_60000_50.jpeg)
+
+Auch hier erkennt man bei Architektur 5 einen starken Ausreißer bei 32 Epochen. Generell kommen aber beide Testläufe auf sehr gute Erkennungsraten und niedrige Loss-Werte.
+
+**Übersicht der Erkennungsraten**
+
+
+
 
 ### CNN
 
@@ -223,7 +241,3 @@ Ergebnisse der Netze aus Paper:
 Vergleich von Erkennungsraten und Rechenaufwand von SVM und NN / CNN
 
 > With some classification methods (particuarly template-based methods, such as SVM and K-nearest neighbors), the error rate improves when the digits are centered by bounding box rather than center of mass. If you do this kind of pre-processing, you should report it in your publications.
-
-### Quellen
-Dataset: http://yann.lecun.com/exdb/mnist/
-https://pypi.org/project/mnist/#description
