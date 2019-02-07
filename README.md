@@ -67,22 +67,29 @@ Wir haben verschiedene SVMs auf ihre erreichte Erkennungsrate hin untersucht. Di
 Die Funktion des linearen Kernels sieht dabei folgendermaßen aus: $<x, x'>$. 
 Die Polynom-Kernels haben folgende Gestalt: $(\gamma\cdot \langle x, x'\rangle + r)^d$
 
-Die mit linearem Kernel trainierte SVM erreichte eine Erkennungsrate beim Test mit den 10.000 Testdaten. von 84$\,$%.
+Die mit linearem Kernel trainierte SVM erreichte eine Erkennungsrate beim Test mit den 10.000 Testdaten von 84$\,$%.
 
 Mit den Polynom-Kernels haben wir jeweils verschiedene Kombinationen der Kernelfunktionsparameter $r$ und $\gamma$ durchprobiert.
 Die Ergebnisse sind in den folgenden Diagrammen und Tabellen dargestellt.
 
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/poly2_variation_von_gamma.jpg)
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/poly2_variation_von_r.jpg)
-![](https://github.com/cataleya/isy-project/blob/master/img/documentation/poly2_trainings_samples_serie.jpg)
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/svmpoly4,9.png)
 
+Wie an den Verläufen der Graphen erkennbar, kann man nicht pauschal sagen, welchen Einfluss die Parameter $r$ und $\gamma$ auf die Erkennungsrate haben. Oftmals kann man mit unterschiedlichen Kombinationen auch gleichhohe Erkennungsraten erzielen.
+Die höchte Erkennungsrate beim Training mit 2.500 Samples wurde mit dem Polynomkernel 2. Grades mit verschiedenen Kombinationen der Parameter $r$ und $\gamma$ erzielt und beträgt 95,6 %.
 
-Bisherige Virtual-SVMs haben eine Test-Fehlerrate von 0,56% erreicht (*Virtual SVM deg-9 poly*).
-Beste Fehlerrate mit *Reduced Set SVM deg 5 polynomial*: 1,0%
-Quelle: DeCoste and Scholkopf (2002)
+In der folgenden Abbildung ist der Einfluss der Anzahl der Trainingssamples auf die Erkennungsrate dargestellt. Der verwendete Kernel war ein Polynom 2. Grades mit den Parametern $r=0$ und $\gamma = 0,05$ 
 
-Y. LeCun, L. Bottou, Y. Bengio and P. Haffner: Gradient-Based Learning Applied to Document Recognition, Proceedings of the IEEE, 86(11):2278-2324, November 1998, \cite{lecun-98}. 
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/poly2_trainings_samples_serie.jpg)
+
+Während die Erkennungsraten bei bis zu ca. 2.000 Trainingssamples stark streuen, ist ab dort ein klarer Anstieg zu beobachten.
+Bei 60.000 Trainingssamples ist die Sättigungsgrenze bereits erreicht, sodass mehr Trainingssamples nur einen verschwindenden positiven Effekt hätten. 
+Die Erkennungsrate lässt sich hier unter Erhöhung der Traiingssamples auf 60.000 auf einen Wert von 98,1 % erhöhen.
+
+Die bisher beste veröffentlichte Virtual-SVM hat dazu im Vergleich eine Erkennungsrate von 99,44 % erreicht.
+(DeCoste and Scholkopf (2002))
+
 
 ### Neuronale Netze
 Neuronale Netze ahmen die Strukturen des menschlichen Gehirns nach. Die Grundidee dabei ist, dass Neuronen angesteuert und je nach Eingabewert eine Aktivierung des Neurons erfolgt oder nicht, was eine weitere Aktion auslöst, respektive nicht auslöst.
