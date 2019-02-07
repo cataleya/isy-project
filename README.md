@@ -40,7 +40,6 @@ Folgend werden die verschiedenen Implementierungen und Test des MNIST-Datensatze
 
 Die Berechnungen erfolgten auf folgenden Computern:
 - MacBook Pro (13-inch, Late 2011), Graphics: Intel HD Graphics 3000 512 MB
-- @Andreas: Daten einfügen
 
 ### Support Vector Machine
 HOW TO RUN ON GPU:
@@ -176,9 +175,14 @@ In der folgenden Abbildung sind die Diagramme für Erkennungsraten und Lossfunkt
 Auch hier erkennt man bei Architektur 5 einen starken Ausreißer bei 32 Epochen. Generell kommen aber beide Testläufe auf sehr gute Erkennungsraten und niedrige Loss-Werte.
 
 **Übersicht der Erkennungsraten**
+Die folgende Tabelle zeigt die Übersicht der erreichten Erkennungsraten.
 
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/table.png)
 
+Man sieht, dass bei 3000 Trainingssamples und 1000 Testsamples die Erkennungsraten schlechter sind als bei 60000 Trainingssamples und 10000 Testsamples (ca. 5 %-Punkte). Die Unterschiede zwischen den Architekturen der Modelle beeinflussen nicht wesentlich die Erkennungsraten, also verbessern sich nicht wie zu erwarten wäre, wenn sich Layer- und Neuronenanzahl erhöhen. Auch durch die Erhöhung der Epochenanzahl werden die Erkennungsraten nicht gesteigert.
 
+Im Vergleich zu den Erkennungsraten bzw. Test Errors des oben erwähnten Papers [“Deep Big Simple Neural Nets Excel on Handwritten Digit Recognition“](https://arxiv.org/pdf/1003.0358.pdf) konnten die Ergebnisse nicht reproduziert werden.
+Dies kann damit erklärt werden, dass das Paper zusätzlich zum originalen MNIST-Datensatz die Trainings- und Testdaten vor dem Training durch Drehung, Skalierung, etc. erweitert haben und somit die Modelle noch besser trainieren konnten. Dies bestätigt weiterhin, dass die verwendeten Trainigs- und Testdaten essentiell für den Erfolg neuronaler Netzwerke sind.
 
 ### CNN
 
@@ -227,8 +231,6 @@ Als letztes haben wir noch den Einfluss der Neuronenzahl in den dense layers var
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/CNN_neuronenzahl_serie.jpg)
 
 Klar ersichtlich ist, dass das Netz mit nur 8 Neuronen pro dense layer viel mehr Epochen benötigt und auch nach vielen Epochen noch keine gute Erkennungsrate erzielt. Mit steigender Anzahl der Neuronen steigt auch der Trainingserfolg pro Epoche und auch die letztendlich erreichte Erkennungsrate nach 20 Epochen an.
-
-
 
 
 ## Ergebnisse
