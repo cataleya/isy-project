@@ -73,7 +73,6 @@ Mit den Polynom-Kernels haben wir jeweils verschiedene Kombinationen der Kernelf
 Die Ergebnisse sind in den folgenden Diagrammen und Tabellen dargestellt.
 
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/poly2_variation_von_gamma.jpg)
-![](https://github.com/cataleya/isy-project/blob/master/img/documentation/poly2_variation_von_r.jpg)
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/svmpoly4,9.png)
 
 Wie an den Verläufen der Graphen erkennbar, kann man nicht pauschal sagen, welchen Einfluss die Parameter $r$ und $\gamma$ auf die Erkennungsrate haben. Oftmals kann man mit unterschiedlichen Kombinationen auch gleichhohe Erkennungsraten erzielen.
