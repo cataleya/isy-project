@@ -119,7 +119,11 @@ Beispielsweise wird ein Bild der Ziffer 3 eingegeben, die Bilddaten werden gewic
 
 Bei der Erstellung von neuronalen Netzen sind vor allem die Anzahl der hidden Layer und Anzahl der Neuronen die maßgebenden Stellschrauben.
 
-In diesem Projekt wurden zwei verschiedene Strukturen getestet, die auch im Paper [“Deep Big Simple Neural Nets Excel on Hand- written Digit Recognition“](https://arxiv.org/pdf/1003.0358.pdf) von Ciresan, et al. getestet wurden.
+In diesem Projekt wurden zwei verschiedene Strukturen getestet, die auch im Paper [“Deep Big Simple Neural Nets Excel on Handwritten Digit Recognition“](https://arxiv.org/pdf/1003.0358.pdf) von Ciresan, et al. getestet wurden:
+
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/netze-paper.png)
+
+Wie in der Tabelle zu sehen ist, ähneln sich die ersten 4 Netzstrukturen, es wird jeweils ein Layer mit 500 Neuronen vorgeschaltet. Die 5. Architektur hingegen besteht aus 9 Layern mit jeweils 1000 Neuronen + 10 (Outputlayer mit 10 Klassen).
 
 Beide Netzstrukturen wurden jeweils mit dem unveränderten MNIST-Datensatz über 30 und 50 Epochen trainiert.
 
