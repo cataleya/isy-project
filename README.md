@@ -65,21 +65,22 @@ Die Idee hinter dem *Kernel-Trick* ist, die Trainingsvektoren aus dem Raum *X* i
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/svmwiki.png)
 
 Wir haben verschiedene SVMs auf ihre erreichte Erkennungsrate hin untersucht. Die SVMs unterscheiden sich in der verwendeten Kernelfunktion und ihren Funktionsparametern. Als Kernelfunktionen haben wir lineare Funktionen und Polynome 2.,4. und 9. Grades benutzt.
-Die Funktion des linearen Kernels sieht dabei folgendermaßen aus: $<x, x'>$. 
-Die Polynom-Kernels haben folgende Gestalt: $(\gamma\cdot \langle x, x'\rangle + r)^d$
+Die Funktion des linearen Kernels sieht dabei folgendermaßen aus: <x, x'>. 
+Die Polynom-Kernels haben folgende Gestalt: (gamma * <x, x> + r)^d
+Dabei ist <.,.> das Standardskalarprodukt im R^n.
 
-Die mit linearem Kernel trainierte SVM erreichte eine Erkennungsrate beim Test mit den 10.000 Testdaten von 84$\,$%.
+Die mit linearem Kernel trainierte SVM erreichte eine Erkennungsrate beim Test mit den 10.000 Testdaten von 84 %.
 
-Mit den Polynom-Kernels haben wir jeweils verschiedene Kombinationen der Kernelfunktionsparameter $r$ und $\gamma$ durchprobiert.
+Mit den Polynom-Kernels haben wir jeweils verschiedene Kombinationen der Kernelfunktionsparameter *r* und *gamma* durchprobiert.
 Die Ergebnisse sind in den folgenden Diagrammen und Tabellen dargestellt.
 
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/poly2_variation_von_gamma.jpg)
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/svmpoly4,9.png)
 
-Wie an den Verläufen der Graphen erkennbar, kann man nicht pauschal sagen, welchen Einfluss die Parameter $r$ und $\gamma$ auf die Erkennungsrate haben. Oftmals kann man mit unterschiedlichen Kombinationen auch gleichhohe Erkennungsraten erzielen.
-Die höchte Erkennungsrate beim Training mit 2.500 Samples wurde mit dem Polynomkernel 2. Grades mit verschiedenen Kombinationen der Parameter $r$ und $\gamma$ erzielt und beträgt 95,6 %.
+Wie an den Verläufen der Graphen erkennbar, kann man nicht pauschal sagen, welchen Einfluss die Parameter *r* und *gamma* auf die Erkennungsrate haben. Oftmals kann man mit unterschiedlichen Kombinationen auch gleichhohe Erkennungsraten erzielen.
+Die höchte Erkennungsrate beim Training mit 2.500 Samples wurde mit dem Polynomkernel 2. Grades mit verschiedenen Kombinationen der Parameter *r* und *gamma* erzielt und beträgt 95,6 %.
 
-In der folgenden Abbildung ist der Einfluss der Anzahl der Trainingssamples auf die Erkennungsrate dargestellt. Der verwendete Kernel war ein Polynom 2. Grades mit den Parametern $r=0$ und $\gamma = 0,05$ 
+In der folgenden Abbildung ist der Einfluss der Anzahl der Trainingssamples auf die Erkennungsrate dargestellt. Der verwendete Kernel war ein Polynom 2. Grades mit den Parametern *r=0* und *gamma=0,05* 
 
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/poly2_trainings_samples_serie.jpg)
 
@@ -192,7 +193,7 @@ Als nächstes haben wir die Anzahl der conv-Layers pro Schicht variiert. Wie in 
 
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/CNN_conv_layers_serie.jpg)
 
-Dabei zeigt sich, dass die Netze mit 1 und 3 conv-Layers pro Schicht einen ähnlichen Trainingserfolg von 96 bis 98$\,$% aufweisen. Bei den Netzen mit 4 und 5 conv-Layers ist augenscheinlich ein Fehler aufgetreten, da sich die Erkennungsraten um 10$\,$% aufhalten, was einem zufälligen Raten gleichkommt. 
+Dabei zeigt sich, dass die Netze mit 1 und 3 conv-Layers pro Schicht einen ähnlichen Trainingserfolg von 96 bis 98 % aufweisen. Bei den Netzen mit 4 und 5 conv-Layers ist augenscheinlich ein Fehler aufgetreten, da sich die Erkennungsraten um 10 % aufhalten, was einem zufälligen Raten gleichkommt. 
 
 Aus den ersten beiden Testreihen entnehmen wir, dass die Veränderung der Layeranzahl nahezu keinen Einfluss auf die Qualität des trainierten Netzes hat.
 
@@ -204,13 +205,13 @@ Als nächstes haben wir die Poolgröße verändert.
 
 Mit einer Poolgröße von 3x3 Pixel benötigt das Netz weniger Epochen zum Training, als bei der Verwendung der 5x5 Poolgröße. Außerdem 
 sieht man, dass die Verwendung von Dropout layers die benötigten Epochen zusätzlich reduziert.
-Allerdings kommen alle Architekturen nach 20 Epochen auf etwa dieselbe Erkennungsrate zwischen 96 und 97$\,$%.
+Allerdings kommen alle Architekturen nach 20 Epochen auf etwa dieselbe Erkennungsrate zwischen 96 und 97 %.
 
 Einen noch stärker erkennbaren Einfluss auf das Training hat die Wahl der batch size, wie im folgenden Diagramm zu sehen.
 
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/CNN_pool_size_serie.jpg)
 
-Bei der Verwendung einer zu großen batch size finden pro Epoche weniger back propagations statt. Dadurch läuft das Training schneller, jedoch benötigt man wie zu sehen auch mehr Epochen. Die Ergebnisse liegen zwischen 95 und 97$\,$%.
+Bei der Verwendung einer zu großen batch size finden pro Epoche weniger back propagations statt. Dadurch läuft das Training schneller, jedoch benötigt man wie zu sehen auch mehr Epochen. Die Ergebnisse liegen zwischen 95 und 97 %.
 
 Als letztes haben wir noch den Einfluss der Neuronenzahl in den dense layers variiert. Das Ergebnis ist im nachfolgenden Diagramm zu sehen.
 
