@@ -161,29 +161,6 @@ nn5.add(Dense(classes, activation='softmax'))
 nn5.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 ```
  
-**Plots Struktur 1:**
-
-![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model_accuracy_nn1_30.png)
-![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model_accuracy_nn1_50.png)
-
-![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model_loss_nn1_30.png)
-![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model_loss_nn1_50.png)
-
-**Plots Struktur 2:**
-
-![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model_accuracy_nn5_30.png)
-![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model-accuracy-nn5-50.png)
-
-![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model_loss_nn5_30.png)
-![](https://github.com/cataleya/isy-project/blob/master/img/trainings/model_loss-nn5-50.png)
-
-
-### Preprocessing der Daten
-**Test** 
-// Katharina
-– Verringerung von Kontrast und Helligkeit des Bilddatensatzes:
-- Verändert sich die Erkennungsrate und wenn ja, wie / wie stark?
-- Wie beeinflusst die Anpassung des Bias-Wertes die eventuelle Veränderung? 
 
 ### CNN
 
