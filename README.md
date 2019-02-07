@@ -124,6 +124,16 @@ In diesem Projekt wurden zwei verschiedene Strukturen getestet, die auch im Pape
 ![](https://github.com/cataleya/isy-project/blob/master/img/documentation/netze_paper.png)
 
 Wie in der Tabelle zu sehen ist, ähneln sich die ersten 4 Netzstrukturen, es wird jeweils ein Layer mit 500 Neuronen vorgeschaltet. Die 5. Architektur hingegen besteht aus 9 Layern mit jeweils 1000 Neuronen + 10 (Outputlayer mit 10 Klassen).
+Die Ergebnisse zeigen, dass mit steigender Layer- und Neuronenanzahl auch die Erkennungsrate steigt, beziehungsweise der Test Error sinkt. 
+
+Es wurden für alle 5 Netzstrukturen eine Berechnung mit 3000 Trainings- und 1000 Testsamples durchgeführt.
+Die Modelle wurden zum einen über 30 Epochen, zum zweiten über 50 Epochen trainiert.
+
+Folgend sieht man die dazugehörigen Diagramme im Bezug Erkennungsrate zu Epoche:
+
+
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/nn3000_30.jpeg)
+![](https://github.com/cataleya/isy-project/blob/master/img/documentation/nn3000_50.jpeg)
 
 Beide Netzstrukturen wurden jeweils mit dem unveränderten MNIST-Datensatz über 30 und 50 Epochen trainiert.
 
