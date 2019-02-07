@@ -42,60 +42,29 @@ Die Berechnungen erfolgten auf folgenden Computern:
 - MacBook Pro (13-inch, Late 2011), Graphics: Intel HD Graphics 3000 512 MB
 
 ### Support Vector Machine
-HOW TO RUN ON GPU:
-https://stackoverflow.com/questions/45662253/can-i-run-keras-model-on-gpu
 
-Hyperparameter: Anzahl der Keypoints, Größe der Features,
-Classifiers (C, ... gamma ..) -> Korrelation der Werte
-https://scikit-learn.org/stable/modules/classes.html#module-sklearn.svm
-Architekturen mit Ergebnissen (Papers): http://yann.lecun.com/exdb/mnist/
-SVM und Hyperparameter: https://stats.stackexchange.com/questions/290642/how-to-choose-a-support-vector-machine-classifier-and-tune-the-hyperparameters
-//
-SVMs können zu zweierlei Zwecke eingesetzt werden. Einerseits dienen sie als Regressor. Für unser Projekt ist aber nur die zweite Funktion -- die Klassifikation -- interessant.
+*Support Vector Machines* (SVMs) sind hilfreich in zwei denkbaren Anwendungsfällen. Einerseits dienen sie als Regressor. Wir setzen sie jedoch als Klassifikatoren ein.
 
-TODO:
-The advantages of support vector machines are:
-- Effective in high dimensional spaces
-- Still effective in cases where number of dimensions is greater than the number of samples
-- Uses a subset of training points in the decision function (called support vectors), so it is also memory efficient
-- Versatile: different Kernel functions can be specified for the decision function. Common kernels are provided, but it is also possible to specify custom kernels
+Dabei haben sie gegenüber den mehrlagigen Perzeptronen folgende Vorteile:
+- klassifizieren effizient hochdimensionalen Daten
+- liefern auch noch gute Ergebnisse, wenn die Anzahl der Dimensionen größer als die Anzahl der Samples ist
+- benutzt nur eine Untermenge der Trainingssamples (die sogenannten *Support Vectors*) für die Vorhersagefunktion
 
-The disadvantages of support vector machines include:
-If the number of features is much greater than the number of samples, avoid over-fitting in choosing Kernel functions and regularization term is crucial.
-SVMs do not directly provide probability estimates, these are calculated using an expensive five-fold cross-validation (see Scores and probabilities, below).
-Quelle: https://scikit-learn.org/stable/modules/svm.html
+Zu den Nachteilen gehören u.a. folgende Punkte:
+- falls die Dimension der Inputdaten viel größer als die Anzahl der Samples ist, kann man *overfitting* durch Regularisierungsterme und die Wahl einer geeigneten Kernelfunktion verhindern
+- SVMs führen nicht direkt Wahrscheinlichkeitsschätzungen durch. Diese können aber durch eine rechenlastige fünffache cross-validation berechnet werden
+- SVMs do not directly provide probability estimates. these are calculated using an expensive five-fold cross-validation
+(https://scikit-learn.org/stable/modules/svm.html)
 
+SVMs gehören zu den supervised machine learning Algorithmen. Ziel des Trainings einer SVM ist es, in den Vektorraum *X*, in dem die Input-Daten leben Trennflächen -- sog. *Hyperflächen* -- einzupassen, die die Trainingsobjekte in Klassen unterteilen. Der Abstand der nächsten Nachbarn zu diesen *Hyperflächen* wird dabei maximiert. Dieser breite Rand soll garantieren, dass später die Testobjekte richtig klassifiziert werden. Beim Berechnen der *Hyperflächen* spielen die weiter von ihr entfernten Trainingsvektoren keine Rolle. Die Vektoren, welche zur Berechnung herangezogen werden, werden gemäß ihrer Funktion auch *Stützvektoren (support vectors)* genannt.
 
-Die Trainingsobjekte müssen gelabelt und als Vektoren vorliegen. Ziel des Trainings einer SVM ist es, in den Vektorraum *X*, in dem die Vektoren leben Trennflächen -- sog. *Hyperflächen* -- einzupassen, die die Trainingsobjekte in Klassen unterteilen. Der Abstand der nächsten Nachbarn zu diesen *Hyperflächen* wird dabei maximiert. Dieser breite Rand soll garantieren, dass später die Testobjekte richtig klassifiziert werden. Beim Berechnen der *Hyperflächen* spielen die weiter von ihr entfernten Trainingsvektoren keine Rolle. Die Vektoren, welche zur Berechnung herangezogen werden, werden gemäß ihrer Funktion auch *Stützvektoren* genannt.
+Für den Fall, dass die Trennflächen *Hyperebenen* sind, nennt man die Input-Daten linear trennbar. Diese Eigenschaft erfüllen die meisten Objektmengen jedoch nicht. Um nichtlineare Klassengrenzen zu berechnen, wird der sogenannte *Kernel-Trick* benutzt.
+Die Idee hinter dem *Kernel-Trick* ist, die Trainingsvektoren aus dem Raum *X* in einen höherdimensionalen Raum *F* zu überführen, in dem sie dann linear trennbar sind. Es werden die Trennebenen berechnet und diese anschließend in den Raum *X* zurücktransformiert. Diese Rechenoperationen sind effizient mit den sogenannten Kernels durchführbar.
+(https://de.wikipedia.org/wiki/Support_Vector_Machine)
 
-Für den Fall, dass die Trennflächen *Hyperebenen* sind, nennt man die Objekte linear trennbar. Diese Eigenschaft erfüllen die meisten Objektmengen jedoch nicht. Um nichtlineare Klassengrenzen zu berechnen, wird der sogenannte *Kernel-Trick* benutzt.
-Die Idee hinter dem *Kernel-Trick* ist, die Trainingsvektoren aus dem Raum *X* in einen höherdimensionalen Raum *F* zu überführen, in dem sie dann linear trennbar sind. Es werden die Trennebenen berechnet und diese anschließend in den Raum *X* zurücktransformiert.
-
-Sogenannte *Schlupfvariablen* machen SVMs flexibler. Mit ihnen lassen sich sogenannte *Soft Margin Hyperflächen* berechnen. Diese lassen es zu, dass Ausreißer in den Trainngsdaten weniger Beachtung finden. Dadurch wird *overfitting* vermieden und es werden weniger *Stützvektoren* benötigt.
-
-Quelle: https://de.wikipedia.org/wiki/Support_Vector_Machine
-
-Zu implementierende Modelle + Hyperparameter:
- linear kernel: <x, x'>
- rbf kernel: exp(-gamma*||x-x'||^2)
- polynomial: (gamma*<x, x'> + r)^d ... d->degree , r->coef0
-
-SVC(...):
- C=1.0 
- kernel=’rbf’, ‘linear’, ‘poly’
- degree=2, 4, 9
- gamma=’auto_deprecated’ (=1/n_features) ODER: Probiere mit gamma= 1/n_features, 100/n_features, 0.01/n_features
- coef0=0.0 ... habe keine Ahnung, welche Werte hier sinnvoll wären
- shrinking=True, 
- probability=False 
- tol=0.001 
- cache_size=2000
- class_weight=None
- verbose=False
- max_iter=-1 ... no limit for number of iterations
- decision_function_shape=’ovr’
- random_state=None)
-
+Wir haben verschiedene SVMs auf ihre erreichte Erkennungsrate hin untersucht. Die SVMs unterscheiden sich in der verwendeten Kernelfunktion und ihren Funktionsparametern. Als Kernelfunktionen haben wir lineare Funktionen und Polynome 2.,4. und 9. Grades benutzt.
+Die Funktion des linearen Kernels sieht dabei folgendermaßen aus: $<x, x'>$. 
+Die Polynom-Kernels haben folgende Gestalt: $(\gamma\cdot \langle x, x'\rangle + r)^d$
 
 Auswertung:
 
