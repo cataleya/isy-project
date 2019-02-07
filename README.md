@@ -8,7 +8,7 @@ Im Rahmen des Kurses Interactive Systems an der Beuth Hochschule werden verschie
 Die Erkennung von handgeschriebenen Ziffern ist gut erforscht, dieses Beispiel wird in Verbindung mit dem MNIST-Datensatz zum Trainieren und Testen von Modellen im Bereich des maschinellen Lernens verwendet.
 ### Datensatz 
 Der MNIST-Datensatz enthält Bilddaten von handgeschiebenen Ziffen von 0 bis 9 in Graustufen (Pixelwerte von 0 bis 255).
-Er basiert auf dem ursprünglichen NIST-Datensatz (Quelle: https://www.nist.gov/sites/default/files/documents/srd/nistsd19.pdf), der für die bessere Nutzung normalisiert und optimiert wurde. Die Bildgröße wurde von 20px * 20px auf 28px * 28px gebracht, wobei das Verhältnis der Bilder beibehalten wurde. Die schwarz-weiss-Bilder wurden in Graustufen umgerechnet. Bei der Optimierung wurden weiterhin die Ziffen auf den Bildern zentriert (center of mass Berechnung).
+Er basiert auf dem ursprünglichen NIST-Datensatz (Quelle: https://www.nist.gov/sites/default/files/documents/srd/nistsd19.pdf), der für die bessere Nutzung normalisiert und optimiert wurde. Die Bildgröße wurde von 20px * 20px auf 28px * 28px gebracht, wobei das Verhältnis der Bilder beibehalten wurde. Die schwarz-weiss-Bilder wurden in Graustufen umgerechnet. Bei der Optimierung wurden weiterhin die Ziffern auf den Bildern zentriert (center of mass Berechnung).
 
 Der Datensatz ist wiefolgt aufgebaut:
 - 60.000 Training Samples 
@@ -25,8 +25,9 @@ Das Keras Framework stellt den Import des MNIST-Datensatzes bereit.
 Rückgabewert sind 2 Tupel:
 - X_train, X_test: uint8 array of grayscale image data with shape (num_samples, 28, 28).
 - y_train, y_test: uint8 array of digit labels (integers in range 0-9) with shape (num_samples,).
+(Quelle: https://keras.io/datasets/)
 
-siehe (https://keras.io/datasets/)
+Für die Berechnung der Modelle wurde die Anzahl der Trainings- und Testsamples, also die Anzahl der für das Training und das Testen des Modells verwendeten Bilder, variiert. Das Verkleinern der Trainingsmenge geschah vor allem aus Mangel der geeigneten Hardware um die Modelle schneller trainieren zu lassen.
 
 Beispielbilder des Datensatzes:
 
@@ -34,7 +35,10 @@ Beispielbilder des Datensatzes:
 
 ## Implementierung
 Folgend werden die verschiedenen Implementierungen und Test des MNIST-Datensatzes beschrieben.
-- Frage: hat bei mir die GPU mitgewirkt, oder nicht?
+
+Die Berechnungen erfolgten auf folgenden Computern:
+- MacBook Pro (13-inch, Late 2011), Graphics: Intel HD Graphics 3000 512 MB
+- @Andreas: Daten einfügen
 
 ### Support Vector Machine
 HOW TO RUN ON GPU:
